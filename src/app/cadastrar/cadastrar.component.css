@@ -1,0 +1,36 @@
+#img-bg {
+    background-image: url('../../assets/img/planofundo2.png');
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    background-color: black;
+}
+
+.form-group {
+        width: 35vw;
+        background-color: #00000050;
+        padding: 20px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 4px 2px #FF9900;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        margin-left: 25px;
+        
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #a4a4a4;
+  width: 100%;
+  color: #0f0f0f;
+}
