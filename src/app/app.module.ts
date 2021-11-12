@@ -11,8 +11,6 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
