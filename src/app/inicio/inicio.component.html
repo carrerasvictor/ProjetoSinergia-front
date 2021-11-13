@@ -7,10 +7,10 @@
                 <div class="col-md-6 text-white">
                     <h5 class="fs-24 mb-0">
                     bem-vinde de volta!</h5>
-                    
+
                     <h1 class="fs-54 font-weight-bolder">
                     {{nome}}!</h1>
-                    
+
                     <h5 class="fs-18">
                     expresse suas pensamentos e ideias aqui!</h5>
                 </div>
@@ -18,21 +18,21 @@
 
             <div class="row d-flex justify-content-center mt-3 mb-5">
                 <div class="col-md-6">
-                    <button class="btn btn-light mr-2" 
-                    data-toggle="modal" 
-                    data-target="#novaPostagem"> 
+                    <button class="btn btn-light mr-2"
+                    data-toggle="modal"
+                    data-target="#novaPostagem">
                     criar postagem</button>
 
-                    <a class="btn btn-outline-light" 
-                    href="#postagens"> 
+                    <a class="btn btn-outline-light"
+                    href="#postagens">
                     ver postagens</a>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 d-flex justify-content-center">
-            <img 
-            src="../../assets/img/conversation-1.png" 
+            <img
+            src="../../assets/img/conversation-1.png"
             alt="mensagens enviadas"
             width="500px"
             height="500px">
@@ -42,77 +42,77 @@
 
 <div class="container mb-5 mt-5" id="postagens">
     <nav>
-        <div class="nav nav-tabs d-flex justify-content-center font-weight-bold" 
-        id="nav-tab" 
+        <div class="nav nav-tabs d-flex justify-content-center font-weight-bold"
+        id="nav-tab"
         role="tablist">
             <a class="nav-link active text-secondary"
-            id="nav-home-tab" 
-            data-toggle="tab" 
-            href="#todas" 
-            role="tab" 
-            aria-controls="nav-allPosts" 
+            id="nav-home-tab"
+            data-toggle="tab"
+            href="#todas"
+            role="tab"
+            aria-controls="nav-allPosts"
             aria-selected="true">
             todas as postagens</a>
 
-            <a class="nav-link text-secondary font-weight-bold" 
+            <a class="nav-link text-secondary font-weight-bold"
             id="nav-profile-tab"
-            data-toggle="tab" 
-            href="#minhas" 
-            role="tab" 
-            aria-controls="nav-myPosts" 
+            data-toggle="tab"
+            href="#minhas"
+            role="tab"
+            aria-controls="nav-myPosts"
             aria-selected="false">
             minhas postagens</a>
 
-            <a class="nav-link text-secondary font-weight-bold" 
-            id="nav-contact-tab" 
-            data-toggle="tab" 
-            href="#porTema" 
-            role="tab" 
-            aria-controls="nav-byTheme" 
+            <a class="nav-link text-secondary font-weight-bold"
+            id="nav-contact-tab"
+            data-toggle="tab"
+            href="#porTema"
+            role="tab"
+            aria-controls="nav-byTheme"
             aria-selected="false">
             por tema</a>
         </div>
     </nav>
 
     <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" 
-        id="nav-todas" 
-        role="tabpanel" 
+        <div class="tab-pane fade show active"
+        id="nav-todas"
+        role="tabpanel"
         aria-labelledby="nav-todas-tab">
         todas as postagens</div>
 
-        <div class="tab-pane fade" 
-        id="nav-minhas" 
-        role="tabpanel" 
+        <div class="tab-pane fade"
+        id="nav-minhas"
+        role="tabpanel"
         aria-labelledby="nav-minhas-tab">
         minhas postagens</div>
 
-        <div class="tab-pane fade" 
-        id="nav-porTema" 
-        role="tabpanel" 
+        <div class="tab-pane fade"
+        id="nav-porTema"
+        role="tabpanel"
         aria-labelledby="nav-porTema-tab">
         por tema</div>
     </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" 
-id="novaPostagem" 
-tabindex="-1" 
-aria-labelledby="modalCreatePost" 
+<div class="modal fade"
+id="novaPostagem"
+tabindex="-1"
+aria-labelledby="modalCreatePost"
 aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            
+
             <div class="modal-header d-flex justify-content-between">
                 <p> </p>
                 <h5 id="modalCreatePost">
                 criar postagem</h5>
 
-                <button type="button" 
-                class="close ml-0-imp" 
-                data-dismiss="modal" 
+                <button type="button"
+                class="close ml-0-imp"
+                data-dismiss="modal"
                 aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -122,10 +122,10 @@ aria-hidden="true">
                 <div class="form-group">
                     <label for="titulo">
                     título</label>
-                        
-                    <input 
-                    type="text" 
-                    class="form-control" 
+
+                    <input
+                    type="text"
+                    class="form-control"
                     id="titulo">
                 </div>
 
@@ -133,21 +133,21 @@ aria-hidden="true">
                     <label for="text">
                     texto</label>
 
-                    <textarea class="form-control" 
-                    id="text" 
-                    name="text" 
-                    rows="5" 
+                    <textarea class="form-control"
+                    id="text"
+                    name="text"
+                    rows="5"
                     placeholder=""></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="tema">escolha um tema ou 
-                        <a data-dismiss="modal">
+                    <label for="tema">escolha um tema ou
+                        <a data-dismiss="modal" routerLink="/tema">
                         registre um novo</a>
                         : </label>
 
-                    <select class="form-control" 
-                    id="tema" 
+                    <select class="form-control"
+                    id="tema"
                     name="tema">
                         <option value="">temas</option>
                     </select>
@@ -155,14 +155,14 @@ aria-hidden="true">
             </div>
 
             <div class="modal-footer">
-                <!--<button 
-                type="button" 
-                class="btn btn-secondary" 
+                <!--<button
+                type="button"
+                class="btn btn-secondary"
                 data-dismiss="modal">
                 close</button>-->
 
-                <button 
-                type="submit" 
+                <button
+                type="submit"
                 class="btn btn-primary btn-lg btn-block">
                 postar</button>
             </div>
