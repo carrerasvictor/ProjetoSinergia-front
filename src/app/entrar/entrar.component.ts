@@ -26,9 +26,16 @@ export class EntrarComponent implements OnInit {
     this.auth.entrar(this.usuarioLogin).subscribe((resp: CredenciaisDTO) => {
       this.usuarioLogin = resp;
 
+      environment.token = this.usuarioLogin.token
+      environment.idUsuario = this.usuarioLogin.idUsuario
+      environment.token = this.usuarioLogin.token
+      environment.nomeCompleto = this.usuarioLogin.nome
+      environment.foto = this.usuarioLogin.foto
+
+      //console.log(environment.token)
       this.router.navigate(['/inicio']);
     }, erro => {
-      if (erro.status == 500) {
+      if (erro.status == 400) {
         alert("Usuário ou senha inválidos!");
       }
     })
