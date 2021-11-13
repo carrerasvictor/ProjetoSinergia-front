@@ -1,14 +1,20 @@
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { CredenciaisDTO } from '../model/CredenciaisDTO';
 import { Usuario } from '../model/Usuario';
 
+
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+
+  constructor(
+    private http: HttpClient
+  ) { }
 
   entrar(usuarioLogin: CredenciaisDTO): Observable<CredenciaisDTO> {
     return this.http.post<CredenciaisDTO>(
@@ -19,4 +25,15 @@ export class AuthService {
     return this.http.post<Usuario>(
       'https://sinergiasocial.herokuapp.com/usuarios/cadastro', usuario);
   }
+
+  logado(){
+    let ok: boolean = false;
+
+    if (environment.token != ''){
+      ok = true
+    }
+    return ok
+  }
 }
+
+
