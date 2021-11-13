@@ -1,4 +1,4 @@
-export class UsuarioDTO{
-    public email: string
-    public senha: string
+export class UsuarioDTO {
+  public email: string;
+  public senha: string;
 }
