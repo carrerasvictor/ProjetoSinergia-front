@@ -20,17 +20,24 @@ export class TemaComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    window.scroll(0,0);
     if (environment.token == '') {
       alert('Sua sessão expirou! Faça login novamente');
       this.router.navigate(['/entrar']);
     }
-    this.temaService.refreshToken()
+    this.findAllTemas()
+  }
+  findAllTemas() {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) =>{
+      this.listaTemas = resp
+    })
   }
 
   cadastrar(){
       this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
         this.tema = resp
         alert('Tema cadastrado com sucesso!')
+        this.findAllTemas()
         this.tema = new Tema()
       })
   }
