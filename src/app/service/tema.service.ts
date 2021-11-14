@@ -19,8 +19,15 @@ export class TemaService {
     return this.http.get<Tema[]>('https://sinergiasocial.herokuapp.com/temas', this.token)
   }
 
+  getbyIdTema(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`https://sinergiasocial.herokuapp.com/temas/${id}`, this.token)
+  }
+
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://sinergiasocial.herokuapp.com/temas', tema, this.token)
   }
 
+  putTema(tema: Tema): Observable<Tema>{
+    return this.http.put<Tema>('https://sinergiasocial.herokuapp.com/temas', tema, this.token)
+  }
 }
