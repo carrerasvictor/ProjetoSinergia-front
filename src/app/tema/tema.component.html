@@ -66,7 +66,14 @@
                 <td>{{item.tema}}</td>
                 <td>{{item.subTema}}</td>
                 <td class="d-flex justify-content-end">
-                    <button class="btn btn-info mr-3">editar</button><button class="btn bg-danger text-white">deletar</button>
+                    <button 
+                    class="btn btn-info mr-3" 
+                    [routerLink]="['/tema-edit', item.idTema]">
+                    editar</button>
+                    
+                    <button 
+                    class="btn bg-danger text-white">
+                    deletar</button>
                 </td>
             </tr>
           </tbody>
