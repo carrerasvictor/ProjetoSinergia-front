@@ -1,3 +1,4 @@
+import { PostagemComponent } from './postagem/postagem.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -15,6 +16,7 @@ const routes: Routes = [
 
   {path: 'inicio', component: InicioComponent},
   {path: 'tema', component: TemaComponent},
+  {path: 'postagem', component: PostagemComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
