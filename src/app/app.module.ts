@@ -13,6 +13,9 @@ import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { PostagemComponent } from './postagem/postagem.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
-    TemaComponent
+    TemaComponent,
+    TemaEditComponent,
+    TemaDeleteComponent,
+    PostagemComponent
   ],
   imports: [
     BrowserModule,

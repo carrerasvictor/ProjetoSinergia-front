@@ -7,6 +7,8 @@ export class Postagem {
   public conteudo: string;
   public linkMidia: string;
   public data: Date;
-  public temaRelacionado: Usuario;
-  public usuarioRelacionado: Tema;
+  public temaRelacionado: Tema;
+  public usuarioRelacionado: Usuario;
+  
+  
 }
