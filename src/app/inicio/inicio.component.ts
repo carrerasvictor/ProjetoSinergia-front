@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Tema } from '../model/Tema';
+import { PostagemDeleteComponent } from '../delete/postagem-delete/postagem-delete.component';
 
 @Component({
   selector: 'app-inicio',
