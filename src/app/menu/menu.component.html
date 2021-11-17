@@ -1,28 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-black px-10">
-    <a class="navbar-brand font-weight-bold fs-32 mr-5" href="#"> SNRG</a>
-        
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto color d-flex align-items-baseline">
-            <li class="nav-item active d-flex align-items-center b-bottom">
-                <a class="link-white-active" href="#"> início <span class="sr-only">(current)</span></a>
+<!------------------------------- BLUR!!!! -------------------------------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-blur bg-black">
+    <div class="collapse navbar-collapse mx-15 mt-2" id="menu-logado">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item active">
+                <img 
+                src="{{foto}}" 
+                width="50px" 
+                height="50px" 
+                class="img-fluid rounded-circle">
             </li>
-
-            <li class="nav-item">
-                <a class="link-orange" href="#"> sobre nós</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="link-orange" href="#"> projeto</a>
+            <li class="nav-item pl-3">
+                <p class="m-0 font-weight-bolder text-white fs-16"> {{nome}}</p>
             </li>
         </ul>
-    </div>
 
-    <div>
-        <button class="btn btn-outline-orange my-2 my-sm-0 mr-3 font-weight-bolder" type="submit"> entrar</button>
-        <button class="btn btn-orange my-2 my-sm-0 font-weight-bolder" type="submit"> cadastre-se</button>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a  class="nav-link dropdown-toggle d-flex align-items-center" 
+                        id="navbarDropdown" 
+                        role="button" 
+                        data-toggle="dropdown"
+                        aria-expanded="false">
+
+                        <p class="text-white fs-16 m-0"><i class="fa fa-cog" aria-hidden="true"></i></p>
+                    </a>
+    
+                    <div class="dropdown-menu right-0" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" [routerLink]="['/usuario-edit', idUsuario]"> editar perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" (click)='sair()' > sair</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
+    
