@@ -1,1 +1,40 @@
-<p>menu-landing works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black px-10">
+    <img src="../../assets/img/logo_colorido.png" 
+        alt="logotipo de sinergia"
+        width="50px"
+        height="auto">
+
+    <a class="navbar-brand font-weight-bold fs-32 mr-5 ml-4"> SINERGIA</a>
+        
+    <button class="navbar-toggler" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto d-flex align-items-baseline">
+            <li class="nav-item active d-flex align-items-center b-bottom">
+                <a class="item-nav-active font-weight-bolder" href="#"> início <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="item-nav" href="#"> sobre nós</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="item-nav" href="#"> projeto</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <button class="btn button btn-outline-orange my-2 my-sm-0 mr-3" type="submit" routerLink='/entrar'> entrar</button>
+        <h4 class="item-nav"> ou</h4>
+        <button class="btn button btn-orange my-2 my-sm-0" type="submit" routerLink='/cadastrar'> cadastre-se</button>
+    </div>
+</nav>
