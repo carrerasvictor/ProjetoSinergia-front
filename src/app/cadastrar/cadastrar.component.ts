@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -12,6 +13,10 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario();
   confirmarSenha: string;
   tipoUsuario: string;
+  
+  
+  
+  
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -30,6 +35,28 @@ export class CadastrarComponent implements OnInit {
   cadastrar() {
     this.usuario.tipo = this.tipoUsuario;
 
+    if (this.usuario.foto == null) {
+
+      this.usuario.foto = "https://imgur.com/TdIzREs"
+
+     // console.log(this.usuario)
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
+
+        this.usuario = resp;
+        this.router.navigate(["/entrar"])
+        alert("Usuário cadastrado com sucesso!")
+      })
+      
+    } else {
+
+      console.log(this.usuario)
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
+
+        this.usuario = resp;
+        this.router.navigate(["/entrar"])
+        alert("Usuário cadastrado com sucesso!")
+      })
+
     if (this.usuario.senha != this.confirmarSenha) {
       alert('As senhas estão incorretas.');
     } else {
@@ -41,4 +68,5 @@ export class CadastrarComponent implements OnInit {
       });
     }
   }
+ }
 }

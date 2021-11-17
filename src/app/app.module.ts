@@ -35,7 +35,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     TemaEditComponent,
     TemaDeleteComponent,
     PostagemComponent,
-    MenuLandingComponent
+    MenuLandingComponent,
     PostagemEditComponent,
     PostagemDeleteComponent
   ],
