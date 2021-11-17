@@ -80,7 +80,7 @@
         id="todas"
         role="tabpanel"
         aria-labelledby="nav-todas-tab">
-        
+
             <div>
                 <div class="card-columns">
                     <div class="card text-center" *ngFor='let post of listaPostagens'>
@@ -107,6 +107,9 @@
                             <h5 class="card-title">{{item.titulo}}</h5>
                             <p class="card-text">{{item.conteudo}}</p>
                             <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
+
+                            <a [routerLink]="['/postagem-edit', item.idPostagem]" class="text-info mr-3" href="">Editar</a>
+                            <a  class="text-danger" href="">Apagar</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +120,7 @@
         id="porTema"
         role="tabpanel"
         aria-labelledby="nav-porTema-tab">
-        
+
             <div>
                 <div class="card-columns" *ngFor='let tema of listaTemas'>
                     <div class="card text-center" *ngFor='let post of tema.postagens'>
@@ -172,7 +175,7 @@ aria-hidden="true">
                     <label for="text">
                     texto</label>
 
-                    <textarea [(ngModel)]='postagem.conteudo' 
+                    <textarea [(ngModel)]='postagem.conteudo'
                     class="form-control"
                     id="text"
                     name="text"
@@ -189,8 +192,8 @@ aria-hidden="true">
                     <select class="form-control" [(ngModel)]='idTema'
                     id="tema" (change)='findByIdTema'
                     name="tema">
-                        <option *ngFor='let item of listaTemas' 
-                        value="{{item.idTema}}"> 
+                        <option *ngFor='let item of listaTemas'
+                        value="{{item.idTema}}">
                         {{item.tema}}
                         </option>
                     </select>
