@@ -1,86 +1,26 @@
-/* >>>>>>>>>> margin-padding <<<<<<<<<< */
-.px-10{
-    padding-left: 5vw;
-    padding-right: 5vw;
+.bg-black{
+    background-color: #24242446;
 }
 
-/* >>>>>>>>>> fonts size <<<<<<<<<< */
 .fs-16{
     font-size: 16pt;
 }
 
-.fs-32{
-    font-size: 32pt;
-    margin: -5px;
-    padding: 0px;
-}
-
-/* >>>>>>>>>> bottons <<<<<<<<<< */
-.btn-outline-orange{
-    border: 2px solid #FF9900;
-    font-size: 12pt;
-    color: #FF9900;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.btn-outline-orange:hover{
-    border: 2px solid #FF9900;
-    background-color: #FF9900;
-    color: white;
-    font-size: 12pt;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.btn-orange{
-    border: 2px solid #FF9900;
-    background-color: #FF9900;
-    color: white;
-    font-size: 12pt;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-/* >>>>>>>>>> links <<<<<<<<<< */
-.link-orange{
-    margin-right: 1vw;
-    font-size: 14pt;
-    color: #ff9900b4;
-    text-decoration: none;
-}
-
-.link-white-active{
-    margin-right: 1vw;
-    font-size: 16pt;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* >>>>>>>>>> colors <<<<<<<<<< */
-.color-black{
-    color: black;
-}
-
-.color-orange{
-    color: #FF9900;
-    
-}
-
-/* >>>>>>>>>> background <<<<<<<<<< */
-.bg-black{
-    background-color: black;
-}
-
-/* >>>>>>>>>> effects <<<<<<<<<< */
-.b-bottom{
-    border-bottom: 2px ;
-    color: #FF9900;
+.mx-15{
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 a{
     cursor: pointer;
+}
+
+.right-0{
+    left: auto;
+    right: 0;
+}
+
+.bg-blur {
+    -webkit-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
