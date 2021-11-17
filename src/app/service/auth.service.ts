@@ -11,6 +11,7 @@ import { Usuario } from '../model/Usuario';
   providedIn: 'root'
 })
 export class AuthService {
+  
 
   constructor(
     private http: HttpClient
@@ -39,6 +40,12 @@ export class AuthService {
   getByIdUser(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://sinergiasocial.herokuapp.com/usuarios/${id}`, this.token)
   }
+  atualizar(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('https://sinergiasocial.herokuapp.com/usuarios/atualizar', usuario);
+  }
+  
+  
+
 
   logado(){
     let ok: boolean = false;

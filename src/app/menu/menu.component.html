@@ -1,6 +1,10 @@
 
 <!------------------------------- BLUR!!!! -------------------------------->
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark bg-black ">
+=======
+<nav class="navbar navbar-expand-lg navbar-dark bg-blur bg-black">
+>>>>>>> debfea23758b02821bf06aec842a7b00507e1d82
     <div class="collapse navbar-collapse mx-15 mt-2" id="menu-logado">
         <ul class="navbar-nav mr-auto d-flex align-items-center">
             <li class="nav-item active">
@@ -28,7 +32,7 @@
                     </a>
     
                     <div class="dropdown-menu right-0" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#"> editar perfil</a>
+                        <a class="dropdown-item" [routerLink]="['/usuario-edit', idUsuario]"> editar perfil</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" (click)='sair()' > sair</a>
                     </div>

@@ -20,7 +20,3 @@ a{
     right: 0;
 }
 
-.bg-blur {
-    -webkit-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
