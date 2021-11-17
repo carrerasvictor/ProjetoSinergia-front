@@ -31,4 +31,8 @@ export class PostagemService {
     return this.http.put<Postagem>('https://sinergiasocial.herokuapp.com/postagens', postagem, this.token)
   }
 
+  deletePostagem(id: number){
+    return this.http.delete(`https://sinergiasocial.herokuapp.com/postagens/${id}`, this.token)
+  }
+
 }
