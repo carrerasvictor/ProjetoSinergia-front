@@ -43,6 +43,7 @@
 
 input{
     background-color: #ffffff20;
+    color: rgb(255, 255, 255);
     font-weight: 100;
     border: none;
     border-radius: 5px;
@@ -50,14 +51,14 @@ input{
 
 input:focus{
     background-color: #ffffff20;
-    color: rgb(255, 255, 255);
+    color: rgb(128, 128, 128);
     font-weight: 100 ;
     border: none;
     border-radius: 5px;
 }
 
 input::placeholder{
-    color: rgb(255, 255, 255);
+    color: rgb(128, 128, 128);
 }
 
 button{
