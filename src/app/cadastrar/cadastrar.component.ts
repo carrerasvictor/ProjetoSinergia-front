@@ -13,6 +13,10 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario();
   confirmarSenha: string;
   tipoUsuario: string;
+  
+  
+  
+  
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -35,13 +39,34 @@ export class CadastrarComponent implements OnInit {
 
       this.usuario.foto = "https://imgur.com/TdIzREs"
 
+
       // console.log(this.usuario)
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+
+     // console.log(this.usuario)
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
+
 
         this.usuario = resp;
         this.router.navigate(["/entrar"])
         alert("Usuário cadastrado com sucesso!")
       })
+
+
+
+      
+    } else {
+
+      console.log(this.usuario)
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) =>{
+
+        this.usuario = resp;
+        this.router.navigate(["/entrar"])
+        alert("Usuário cadastrado com sucesso!")
+      })
+
+    if (this.usuario.senha != this.confirmarSenha) {
+      alert('As senhas estão incorretas.');
 
     } else {
 
@@ -65,4 +90,8 @@ export class CadastrarComponent implements OnInit {
       }
     }
   }
+
+  }
+ }
 }
+
