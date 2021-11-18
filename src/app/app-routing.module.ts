@@ -1,3 +1,4 @@
+import { ProjetoComponent } from './projeto/projeto.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { NgModule, Component } from '@angular/core';
@@ -20,20 +21,19 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'tema', component: TemaComponent},
   {path: 'postagem', component: PostagemComponent},
+  {path: 'projeto', component: ProjetoComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
-  
 
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
   {path: 'usuario-edit/:id', component: UsuarioEditComponent}
-  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  
+
 })
 export class AppRoutingModule {}
