@@ -20,8 +20,7 @@ import { MenuLandingComponent } from './menu-landing/menu-landing.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
-
-
+import { ProjetoComponent } from './projeto/projeto.component';
 
 @NgModule({
   declarations: [
@@ -39,16 +38,17 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     MenuLandingComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    ProjetoComponent
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
-  
+
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
