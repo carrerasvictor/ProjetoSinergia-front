@@ -1,9 +1,68 @@
-#img-bg{
-    background-image: url('https://images.pexels.com/photos/9137525/pexels-photo-9137525.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-    min-height: 695px;
-    
+.bg-azul{
+    background: #0094FF;
+    color: white;
+}
+
+.bg-black{
+    background: black
+}
+
+#img-bg{
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
+
+.color-white{
+    color: white;
+}
+
+.color-azul{
+    color: #0094FF;
+}
+
+.box{
+    background: #27272746;
+    backdrop-filter: blur(56px);
+    padding: 5rem;
+    border-radius: 10px;
+    min-width: 25vw;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-size{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+input{
+    background-color: #ffffff20;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+}
+
+input:focus{
+    background-color: #ffffff20;
+    color: rgb(255, 255, 255);
+    font-weight: 100 ;
+    border: none;
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+button{
+    border-radius: 7px;
+}
+
+
+
