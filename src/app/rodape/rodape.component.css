@@ -16,3 +16,14 @@
 ul li:first-child{
     margin-bottom: 4px;
 }
+
+.fs-10{
+    font-size: 10pt;
+  }
+
+  hr {
+    border-top: 1px solid #585858;
+    width: 50%;
+    margin:0 auto
+  }
+  
