@@ -22,8 +22,12 @@ ul li:first-child{
   }
 
   hr {
-    border-top: 1px solid #585858;
+    border: 0;
+    height: 1px;
     width: 50%;
-    margin:0 auto
+    margin: 0 auto;
+    margin-top: 4px;
+    background-image: linear-gradient(to right, rgba(40, 40, 40), rgba(255, 255, 255), rgba(40, 40, 40));
+
   }
   
