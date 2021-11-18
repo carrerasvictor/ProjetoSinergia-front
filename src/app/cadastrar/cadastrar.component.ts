@@ -37,7 +37,7 @@ export class CadastrarComponent implements OnInit {
 
     if (this.usuario.foto == null) {
 
-      this.usuario.foto = "https://imgur.com/TdIzREs"
+      this.usuario.foto = "https://i.imgur.com/Q3Bnwdw.png"
 
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
 
@@ -69,19 +69,10 @@ export class CadastrarComponent implements OnInit {
           alert("Usuário cadastrado com sucesso!")
         })
 
-        if (this.usuario.senha != this.confirmarSenha) {
-          alert('As senhas estão incorretas.');
-        } else {
-          console.log(this.usuario);
-          this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
-            this.usuario = resp;
-            this.router.navigate(['/entrar']);
-            alert('Usuário cadastrado com sucesso!');
-          });
-        }
-      }
+     }
     }
-
   }
+
 }
+
 
