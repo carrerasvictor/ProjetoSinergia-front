@@ -1,0 +1,12 @@
+.voltar{
+    animation: is-bouncing 0.7s ease alternate infinite;
+    display: grid;
+    place-items: left;
+    height: 30px;
+  }
+
+  @keyframes is-bouncing {
+    to{
+      transform: translateX(15px);
+    }
+  }

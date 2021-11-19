@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -13,7 +14,10 @@ export class InicioLandingComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    this.auth.emptyToken()
+    environment.idUsuario = 0
+    environment.nomeCompleto = ''
+    environment.foto = ''
+    environment.token = ''
   }
 
 }
