@@ -16,3 +16,18 @@
 ul li:first-child{
     margin-bottom: 4px;
 }
+
+.fs-10{
+    font-size: 10pt;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 4px;
+    background-image: linear-gradient(to right, rgba(40, 40, 40), rgba(255, 255, 255), rgba(40, 40, 40));
+
+  }
+  

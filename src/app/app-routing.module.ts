@@ -11,6 +11,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { InicioLandingComponent } from './inicio-landing/inicio-landing.component';
+import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio-landing', pathMatch: 'full'},
@@ -22,21 +24,20 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'tema', component: TemaComponent},
   {path: 'postagem', component: PostagemComponent},
+  {path: 'projeto-landing', component: ProjetoLandingComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
-  
 
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
-  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
-  
-  
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  
+
 })
 export class AppRoutingModule {}
