@@ -1,5 +1,10 @@
 .bg-black{
-    background-color: #24242446;
+    background-color: #000000;
+}
+
+.bg-blur{
+    background: #27272746;
+    backdrop-filter: blur(56px);
 }
 
 .fs-16{
@@ -11,7 +16,7 @@
     margin-right: 10vw;
 }
 
-a{
+a, ul{
     cursor: pointer;
 }
 
