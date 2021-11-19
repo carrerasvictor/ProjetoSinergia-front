@@ -45,7 +45,7 @@
 .btn-orange:hover{
     border: 1px solid #FF9900;
     background-color: #FF9900;
-    color: white;
+    color: black;
 }
 
 /* >>>>>>>>>> links <<<<<<<<<< */
@@ -86,4 +86,8 @@
 
 a{
     cursor: pointer;
+}
+.bg-blur{
+    background: #27272746;
+    backdrop-filter: blur(56px);
 }
