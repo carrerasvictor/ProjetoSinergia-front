@@ -1,4 +1,3 @@
-import { ProjetoComponent } from './projeto/projeto.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { NgModule, Component } from '@angular/core';
@@ -11,6 +10,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'entrar', pathMatch: 'full'},
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'tema', component: TemaComponent},
   {path: 'postagem', component: PostagemComponent},
-  {path: 'projeto', component: ProjetoComponent},
+  {path: 'projeto-landing', component: ProjetoLandingComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},

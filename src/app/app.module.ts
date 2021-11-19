@@ -20,7 +20,7 @@ import { MenuLandingComponent } from './menu-landing/menu-landing.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
-import { ProjetoComponent } from './projeto/projeto.component';
+import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { ProjetoComponent } from './projeto/projeto.component';
     PostagemEditComponent,
     PostagemDeleteComponent,
     UsuarioEditComponent,
-    ProjetoComponent
+    ProjetoLandingComponent
   ],
 
   imports: [
