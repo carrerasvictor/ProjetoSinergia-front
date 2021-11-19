@@ -12,6 +12,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { InicioLandingComponent } from './inicio-landing/inicio-landing.component';
 import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
+import { SobreComponent } from './sobre/sobre.component';
+
 
 
 const routes: Routes = [
@@ -25,13 +27,15 @@ const routes: Routes = [
   {path: 'tema', component: TemaComponent},
   {path: 'postagem', component: PostagemComponent},
   {path: 'projeto-landing', component: ProjetoLandingComponent},
+  {path: 'sobre', component: SobreComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
 
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
-  {path: 'usuario-edit/:id', component: UsuarioEditComponent}
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
+ 
 
 ];
 

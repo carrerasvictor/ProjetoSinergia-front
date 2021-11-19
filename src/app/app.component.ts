@@ -22,6 +22,9 @@ export class AppComponent {
     if(this.router.url === '/cadastrar'){
       return false;
     }
+    if(this.router.url === '/sobre'){
+      return false;
+    }
     if(this.auth.logado() == true){
     return false
     }
