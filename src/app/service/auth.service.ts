@@ -11,6 +11,7 @@ import { Usuario } from '../model/Usuario';
   providedIn: 'root'
 })
 export class AuthService {
+  router: any;
   
 
   constructor(
@@ -46,7 +47,6 @@ export class AuthService {
   
   
 
-
   logado(){
     let ok: boolean = false;
 
@@ -55,6 +55,15 @@ export class AuthService {
     }
     return ok
   }
+
+  emptyToken(){
+    environment.idUsuario = 0
+    environment.nomeCompleto = ''
+    environment.foto = ''
+    environment.token = ''
+  }
+
+  
 }
 
 

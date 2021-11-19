@@ -1,5 +1,4 @@
-<app-menu></app-menu>
-
-<app-projeto-landing></app-projeto-landing>
-
-<app-rodape></app-rodape>
+<app-menu *ngIf='auth.logado()'></app-menu>
+<app-menu-landing *ngIf="isOkRoute()"></app-menu-landing>
+<router-outlet></router-outlet>
+<app-rodape></app-rodape>  

@@ -20,6 +20,7 @@ import { MenuLandingComponent } from './menu-landing/menu-landing.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { InicioLandingComponent } from './inicio-landing/inicio-landing.component';
 import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
 
 @NgModule({
@@ -39,6 +40,7 @@ import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.compo
     PostagemEditComponent,
     PostagemDeleteComponent,
     UsuarioEditComponent,
+    InicioLandingComponent,
     ProjetoLandingComponent
   ],
 
