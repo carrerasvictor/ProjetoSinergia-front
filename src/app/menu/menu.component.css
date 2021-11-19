@@ -1,4 +1,8 @@
 .bg-black{
+    background-color: #000000;
+}
+
+.bg-blur{
     background: #27272746;
     backdrop-filter: blur(56px);
 }
