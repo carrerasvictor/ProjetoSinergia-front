@@ -1,0 +1,37 @@
+.bg-black{
+  background-color: #000000;
+}
+
+.fs-10{
+  font-size: 10pt;
+}
+
+.fs-12{
+  font-size: 12pt;
+}
+
+.fs-14{
+  font-size: 14pt;
+}
+
+.fs-26{
+  font-size: 26pt;
+}
+
+.fs-54{
+  font-size: 54pt;
+}
+
+.ml-0-imp{
+  margin-left: 0 !important;
+}
+
+.color-orange{
+  color: #FF9900;
+
+}
+
+.ml-17{
+  margin-left: 17vw;
+}
+
