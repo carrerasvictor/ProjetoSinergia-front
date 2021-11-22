@@ -83,7 +83,8 @@
 
             <div>
                 <div class="card-columns ">
-                    <div class="card text-center" *ngFor='let post of listaPostagens'>
+                    <div class="card text-center"
+                    *ngFor='let post of listaPostagens | orderBy : key : reverse'>
                         <div class="card-body">
                             <h5 class="card-title">{{post.titulo}}</h5>
                             <p class="card-text">{{post.conteudo}}</p>
@@ -102,7 +103,8 @@
 
             <div>
                 <div class="card-columns">
-                    <div class="card text-center" *ngFor='let item of usuario.postagens'>
+                    <div class="card text-center"
+                    *ngFor='let item of usuario.postagens | orderBy : key : reverse'>
                         <div class="card-body">
                             <h5 class="card-title">{{item.titulo}}</h5>
                             <p class="card-text">{{item.conteudo}}</p>
@@ -122,7 +124,8 @@
         aria-labelledby="nav-porTema-tab">
 
             <div>
-                <div class="card-columns" *ngFor='let tema of listaTemas'>
+                <div class="card-columns"
+                *ngFor='let tema of listaTemas | orderBy : key : reverse'>
                     <div class="card text-center" *ngFor='let post of tema.postagens'>
                         <div class="card-body">
                             <h5 class="card-title">{{post.titulo}}</h5>
