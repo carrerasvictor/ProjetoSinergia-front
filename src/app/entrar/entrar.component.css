@@ -68,3 +68,16 @@ button{
 p{
     min-width: 15vw;
 }
+
+.voltar{
+    animation: is-bouncing 0.7s ease alternate infinite;
+    display: grid;
+    place-items: left;
+    height: 900px;
+  
+  }
+  @keyframes is-bouncing {
+    to{
+      transform: translateX(15px);
+    }
+  }
