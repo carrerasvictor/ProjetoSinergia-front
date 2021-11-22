@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -24,6 +25,7 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
 import { InicioLandingComponent } from './inicio-landing/inicio-landing.component';
 import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
 import { AlertasComponent } from './alertas/alertas.component';
+
 
 
 @NgModule({
@@ -53,7 +55,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
 
   providers: [{
