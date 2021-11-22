@@ -22,6 +22,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { InicioLandingComponent } from './inicio-landing/inicio-landing.component';
 import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
+import { AlertaComponent } from './alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.compo
     PostagemDeleteComponent,
     UsuarioEditComponent,
     InicioLandingComponent,
-    ProjetoLandingComponent
+    ProjetoLandingComponent,
+    AlertaComponent
   ],
 
   imports: [
