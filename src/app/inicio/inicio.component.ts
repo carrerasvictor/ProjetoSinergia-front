@@ -7,85 +7,86 @@ import { Router } from '@angular/router';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Tema } from '../model/Tema';
-import { AlertasService } from '../service/alertas.service';
+import { PostagemDeleteComponent } from '../delete/postagem-delete/postagem-delete.component';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css'],
+  styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  postagem: Postagem = new Postagem();
-  listaPostagens: Postagem[];
 
-  tema: Tema = new Tema();
-  listaTemas: Tema[];
-  idTema: number;
+  postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
 
-  nome = environment.nomeCompleto;
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  idTema: number
 
-  usuario: Usuario = new Usuario();
-  idUsuario = environment.idUsuario;
+  nome = environment.nomeCompleto
+
+  usuario: Usuario = new Usuario()
+  idUsuario = environment.idUsuario
 
   constructor(
     private router: Router,
-    private postagemService: PostagemService,
+    private postagemService: PostagemService, 
     private temaService: TemaService,
-    private auth: AuthService,
-    private alertas: AlertasService
-  ) {}
+    private auth: AuthService
+  ) { }
 
   ngOnInit() {
-    window.scroll(0, 0);
-
-    if (environment.token == '') {
-      alert('Sua sessão expirou! Faça login novamente');
-      this.router.navigate(['/entrar']);
+    window.scroll(0,0)
+    
+    if(environment.token == ''){
+      alert('Sua sessão expirou! Faça login novamente')
+      this.router.navigate(['/entrar'])
     }
 
-    this.getAllTemas();
-    this.getAllPostagens();
-    this.auth.refreshToken();
+    this.getAllTemas()
+    this.getAllPostagens()
+    this.auth.refreshToken()
   }
 
   getAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp;
-    });
+      this.listaTemas = resp
+    })
   }
 
   findByIdTema() {
     this.temaService.getbyIdTema(this.idTema).subscribe((resp: Tema) => {
-      this.tema = resp;
-    });
+      this.tema = resp
+    })
   }
 
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
-      this.listaPostagens = resp;
-    });
+      this.listaPostagens = resp
+    })
+
   }
 
   findByIdUser() {
+    console.log(environment)
     this.auth.getByIdUser(this.idUsuario).subscribe((resp: Usuario) => {
-      this.usuario = resp;
-    });
+      this.usuario = resp
+    })
   }
 
   publicar() {
-    this.tema.idTema = this.idTema;
-    this.postagem.temaRelacionado = this.tema;
+    this.tema.idTema= this.idTema
+    this.postagem.temaRelacionado = this.tema
 
-    this.usuario.idUsuario = this.idUsuario;
-    this.postagem.usuarioRelacionado = this.usuario;
+    this.usuario.idUsuario = this.idUsuario
+    this.postagem.usuarioRelacionado = this.usuario
 
-    this.postagemService
-      .postPostagem(this.postagem)
-      .subscribe((resp: Postagem) => {
-        this.postagem = resp;
-        this.alertas.showAlertSuccess('Postagem realizada com sucesso!');
-        this.postagem = new Postagem();
-        this.getAllPostagens();
-      });
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem realizada com sucesso!')
+      this.postagem = new Postagem
+      this.getAllPostagens()
+    })
   }
+
 }
