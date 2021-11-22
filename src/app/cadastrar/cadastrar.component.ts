@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -13,11 +14,15 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha: string;
   tipoUsuario: string;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(
+    private authService: AuthService, 
+    private router: Router,
+    private alertas: AlertasService
+  ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
-    this.authService.emptyToken()
+    this.authService.emptyToken();
   }
 
   confirmSenha(event: any) {
@@ -32,43 +37,29 @@ export class CadastrarComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario;
 
     if (this.usuario.foto == null) {
-
-      this.usuario.foto = "https://i.imgur.com/Q3Bnwdw.png"
+      this.usuario.foto = 'https://i.imgur.com/Q3Bnwdw.png';
 
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
-
-          this.usuario = resp;
-          this.router.navigate(["/entrar"])
-          alert("Usuário cadastrado com sucesso!")
-        })
-
-      } else {
-
-        console.log(this.usuario)
+        this.usuario = resp;
+        this.router.navigate(['/entrar']);
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!');
+      });
+    } else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp;
+        this.router.navigate(['/entrar']);
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!');
+      });
 
-          this.usuario = resp;
-          this.router.navigate(["/entrar"])
-          alert("Usuário cadastrado com sucesso!")
-        })
-
-    if(this.usuario.senha != this.confirmarSenha) {
-        alert('As senhas estão incorretas.');
-
+      if (this.usuario.senha != this.confirmarSenha) {
+        this.alertas.showAlertDanger('As senhas estão incorretas.');
       } else {
-
-        console.log(this.usuario)
         this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
-
           this.usuario = resp;
-          this.router.navigate(["/entrar"])
-          alert("Usuário cadastrado com sucesso!")
-        })
-
-     }
+          this.router.navigate(['/entrar']);
+          this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!');
+        });
+      }
     }
   }
-
 }
-
-
