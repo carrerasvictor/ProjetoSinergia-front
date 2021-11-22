@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -22,6 +23,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { InicioLandingComponent } from './inicio-landing/inicio-landing.component';
 import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
+import { AlertasComponent } from './alertas/alertas.component';
+
 
 @NgModule({
   declarations: [
@@ -41,14 +44,16 @@ import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.compo
     PostagemDeleteComponent,
     UsuarioEditComponent,
     InicioLandingComponent,
-    ProjetoLandingComponent
+    ProjetoLandingComponent,
+    AlertasComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
 
   providers: [{
