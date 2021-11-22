@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
-import { AlertasService } from '../service/alertas.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -11,35 +10,36 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./tema.component.css'],
 })
 export class TemaComponent implements OnInit {
-  tema: Tema = new Tema();
-  listaTemas: Tema[];
+
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
 
   constructor(
     private router: Router,
-    private temaService: TemaService,
-    private alertas: AlertasService
+    private temaService: TemaService
   ) {}
 
   ngOnInit() {
-    window.scroll(0, 0);
+    window.scroll(0,0);
     if (environment.token == '') {
-      this.alertas.showAlertInfo('Sua sessão expirou! Faça login novamente');
+      alert('Sua sessão expirou! Faça login novamente');
       this.router.navigate(['/entrar']);
     }
-    this.findAllTemas();
+    this.findAllTemas()
   }
   findAllTemas() {
-    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
-      this.listaTemas = resp;
-    });
+    this.temaService.getAllTema().subscribe((resp: Tema[]) =>{
+      this.listaTemas = resp
+    })
   }
 
-  cadastrar() {
-    this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
-      this.tema = resp;
-      this.alertas.showAlertSuccess('Tema cadastrado com sucesso!');
-      this.findAllTemas();
-      this.tema = new Tema();
-    });
+  cadastrar(){
+      this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
+        this.tema = resp
+        alert('Tema cadastrado com sucesso!')
+        this.findAllTemas()
+        this.tema = new Tema()
+      })
   }
+
 }
