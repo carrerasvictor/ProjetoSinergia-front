@@ -2,6 +2,94 @@
     background-color: #000000 !important;
 }
 
+.bg-blur{
+    background: #27272746 !important;
+    backdrop-filter: blur(56px);
+}
+
+.color-white{
+    color: #ffffff !important;
+}
+
+.color-blue{
+    color: #0094FF;
+}
+
+textarea, input, select{
+    background-color: #ffffff20;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+}
+
+textarea:focus{
+    background-color: #ffffff20;
+    color: rgb(128, 128, 128);
+    font-weight: 100 ;
+    border: none;
+    border-radius: 5px;
+}
+
+input:focus{
+    background-color: #ffffff20;
+    color: rgb(128, 128, 128);
+    font-weight: 100 ;
+    border: none;
+    border-radius: 5px;
+}
+
+select:focus{
+    background-color: #ffffff20;
+    color: rgb(128, 128, 128);
+    font-weight: 100 ;
+    border: none;
+    border-radius: 5px;
+}
+
+.opacity{
+    background-color: none;
+}
+
+.btn-blue{
+    background-color: #0094FF;
+    color: #fff;
+}
+
+.btn-group, .size-pills{
+    min-width: 8vw;
+    max-width: 8vw;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    border-left: solid 5px #FF9900;
+}
+
+#btnGroup2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-grey{
+    text-decoration: none;
+    color: #FFFFFF80;
+}
+
+.box{
+    background: #696969;
+    padding: 1rem;
+    padding-left: 2rem !important;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+}
+
+.mt-n{
+    margin-top: 8vh;
+}
+
 .fs-54{
     font-size: 54pt;
 }
@@ -16,4 +104,12 @@
 
 .ml-0-imp{
     margin-left: 0 !important;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
 }

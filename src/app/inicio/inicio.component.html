@@ -1,160 +1,195 @@
-<div class="container-fluid">
-
-    <div class="row bg-black align-items-center pt-5">
-        <div class="col-md-6">
+<div class="container-fluid bg-black pt-5">
+    <div class="row pt-5">
+        <div class="col-md-3 pt-5 align-content-between">
 
             <div class="row d-flex justify-content-center">
-                <div class="col-md-6 text-white">
-                    <h5 class="fs-24 mb-0">
-                    bem-vinde de volta!</h5>
-
-                    <h1 class="fs-54 font-weight-bolder">
-                    {{nome}}!</h1>
-
-                    <h5 class="fs-18">
-                    expresse suas pensamentos e ideias aqui!</h5>
-                </div>
-            </div>
-
-            <div class="row d-flex justify-content-center mt-3 mb-5">
                 <div class="col-md-6">
-                    <button class="btn btn-light mr-2"
-                    data-toggle="modal"
-                    data-target="#novaPostagem">
-                    criar postagem</button>
 
-                    <a class="btn btn-outline-light"
-                    routerLink="#postagem">
-                    ver postagens</a>
+                    <div class="nav flex-column nav-pills mb-3 size-pills" 
+                    id="v-pills-tab" 
+                    role="tablist" 
+                    aria-orientation="vertical">
+                        
+                        <a class="nav-link bg-blur text-white text-left active" 
+                        id="v-pills-todas-tab" 
+                        data-toggle="pill" 
+                        href="#v-pills-todas" 
+                        role="tab" 
+                        aria-controls="v-pills-todas" 
+                        aria-selected="true">Todas</a>
+
+                        <a class="nav-link bg-blur text-white text-left" 
+                        id="v-pills-minhas-tab" 
+                        data-toggle="pill" 
+                        href="#v-pills-minhas" 
+                        role="tab" 
+                        aria-controls="v-pills-minhas" 
+                        aria-selected="false">Minhas</a>
+                    </div>
+                    
+                    <!--<div class="btn-group-vertical mb-3" 
+                    role="group" 
+                    aria-label="Button group with nested dropdown">
+
+                        <div class="btn-group" role="group">
+                            <a 
+                            class="btn bg-blur text-white text-left active"
+                            id="nav-todas-tab"
+                            href="#todas"
+                            data-toggle="tab"
+                            role="tab"
+                            aria-controls="nav-todas"
+                            aria-selected="true">
+                            Todas</a>
+                        </div>
+                        
+                        <div class="btn-group" role="group">
+                            <a 
+                            class="btn bg-blur text-white text-left"
+                            id="nav-minhas-tab"
+                            href="#minhas"
+                            data-toggle="tab"
+                            role="tab"
+                            aria-controls="nav-minhas"
+                            aria-selected="false">
+                            Minhas</a>
+                        </div>
+                        
+                    </div>-->
                 </div>
             </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">        
+                    
+                    <div class="btn-group-vertical mb-3" 
+                    role="group" 
+                    aria-label="Button group with nested dropdown">
+
+                        <div class="btn-group" role="group">
+                            <button 
+                            id="btnGroup2" 
+                            type="button" 
+                            class="btn bg-blur text-white dropdown-toggle" 
+                            data-toggle="dropdown"
+                            aria-expanded="false">
+                            Atômica</button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroup2">
+                                <a class="dropdown-item" href="#">subtema</a>
+                                <a class="dropdown-item" href="#">subtema</a>
+                            </div>
+                        </div>
+        
+                        <div class="btn-group" role="group">
+                            <button 
+                            id="btnGroup2" 
+                            type="button" 
+                            class="btn bg-blur text-white dropdown-toggle" 
+                            data-toggle="dropdown"
+                            aria-expanded="false">
+                            Elétrica</button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroup2">
+                                <a class="dropdown-item" href="#">subtema</a>
+                                <a class="dropdown-item" href="#">subtema</a>
+                            </div>
+                        </div>
+        
+                        <div class="btn-group" role="group">
+                            <button 
+                            id="btnGroup2" 
+                            type="button" 
+                            class="btn bg-blur text-white dropdown-toggle" 
+                            data-toggle="dropdown"
+                            aria-expanded="false">
+                            Mecânica</button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroup2">
+                                <a class="dropdown-item" href="#">subtema</a>
+                                <a class="dropdown-item" href="#">subtema</a>
+                            </div>
+                        </div>
+        
+                        <div class="btn-group" role="group">
+                            <button 
+                            id="btnGroup2" 
+                            type="button" 
+                            class="btn bg-blur text-white dropdown-toggle" 
+                            data-toggle="dropdown"
+                            aria-expanded="false">
+                            Química</button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroup2">
+                                <a class="dropdown-item" href="#">subtema</a>
+                                <a class="dropdown-item" href="#">subtema</a>
+                            </div>
+                        </div>
+        
+                        <div class="btn-group" role="group">
+                            <button 
+                            id="btnGroup2" 
+                            type="button" 
+                            class="btn bg-blur text-white dropdown-toggle" 
+                            data-toggle="dropdown"
+                            aria-expanded="false">
+                            Térmica</button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroup2">
+                                <a class="dropdown-item" href="#">subtema</a>
+                                <a class="dropdown-item" href="#">subtema</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="col-md-6 d-flex justify-content-center">
-            <img
-            src="../../assets/img/planofundo2.png"
-            alt="mensagens enviadas"
-            width="500px"
-            height="500px">
+        <div class="col-md-6 pt-5">
+            
+            <div class="box mb-3" 
+            data-toggle="modal"
+            data-target="#novaPostagem">
+                <a 
+                class="text-grey"
+                id="criarPost">
+                <i class="fa fa-pencil mr-2" aria-hidden="true"></i>
+                No que você está ligado?</a>
+            </div>
+
+            <div class="tab-content" id="v-pills-tabContent">
+                <div 
+                class="tab-pane fade show active" 
+                id="v-pills-todas" 
+                role="tabpanel" 
+                aria-labelledby="v-pills-todas-tab">
+                todaaaaaaaaaas</div>
+                
+                <div 
+                class="tab-pane fade" 
+                id="v-pills-minhas" 
+                role="tabpanel" 
+                aria-labelledby="v-pills-minhas-tab">
+                minhaaaaaaaaas</div>
+            </div>
+
         </div>
     </div>
 </div>
-<div class="container-fluid bg-black py-5">
-<div class="container mb-5 mt-5" id="postagens">
-    <nav>
-        <div class="nav nav-tabs d-flex justify-content-center font-weight-bold mb-4"
-        id="nav-tab"
-        role="tablist">
-            <a class="nav-link active text-secondary"
-            id="nav-home-tab"
-            href="#todas"
-            data-toggle="tab"
-            role="tab"
-            aria-controls="nav-allPosts"
-            aria-selected="true">
-            todas as postagens</a>
 
-            <a (click)='findByIdUser()'
-            class="nav-link text-secondary font-weight-bold"
-            id="nav-profile-tab"
-            href="#minhas"
-            data-toggle="tab"
-            role="tab"
-            aria-controls="nav-myPosts"
-            aria-selected="false">
-            minhas postagens</a>
-
-            <a class="nav-link text-secondary font-weight-bold"
-            id="nav-contact-tab"
-            data-toggle="tab"
-            href="#porTema"
-            role="tab"
-            aria-controls="nav-byTheme"
-            aria-selected="false">
-            por tema</a>
-        </div>
-    </nav>
-
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active"
-        id="todas"
-        role="tabpanel"
-        aria-labelledby="nav-todas-tab">
-
-            <div>
-                <div class="card-columns ">
-                    <div class="card text-center" *ngFor='let post of listaPostagens'>
-                        <div class="card-body">
-                            <h5 class="card-title">{{post.titulo}}</h5>
-                            <p class="card-text">{{post.conteudo}}</p>
-                            <p class="card-text"><small class="text-muted">{{post.date | date: 'dd/MM/yyyy'}} às {{post.date | date: 'HH:mm'}}</small></p>
-                            <p class="card-text"><small class="text-muted"> por: {{post.usuarioRelacionado.nomeCompleto}}</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="tab-pane fade"
-        id="minhas"
-        role="tabpanel"
-        aria-labelledby="nav-minhas-tab">
-
-            <div>
-                <div class="card-columns">
-                    <div class="card text-center" *ngFor='let item of usuario.postagens'>
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.titulo}}</h5>
-                            <p class="card-text">{{item.conteudo}}</p>
-                            <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
-
-                            <a [routerLink]="['/postagem-edit', item.idPostagem]" class="text-info mr-3" href="">Editar</a>
-                            <a  class="text-danger" [routerLink]="['/postagem-delete', item.idPostagem]" >Apagar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="tab-pane fade"
-        id="porTema"
-        role="tabpanel"
-        aria-labelledby="nav-porTema-tab">
-
-            <div>
-                <div class="card-columns" *ngFor='let tema of listaTemas'>
-                    <div class="card text-center" *ngFor='let post of tema.postagens'>
-                        <div class="card-body">
-                            <h5 class="card-title">{{post.titulo}}</h5>
-                            <p class="card-text">{{post.conteudo}}</p>
-                            <p class="card-text"><small class="text-muted">{{post.date | date: 'dd/MM/yyyy'}} às {{post.date | date: 'HH:mm'}}</small></p>
-                            <p class="card-text"><small class="text-muted"> por: {{post.usuarioRelacionado.nomeCompleto}}</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- Modal -->
 <div class="modal fade"
 id="novaPostagem"
 tabindex="-1"
 aria-labelledby="modalCreatePost"
 aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+    <div class="modal-dialog modal-dialog-centered text-white">
+        <div class="modal-content bg-blur">
 
             <div class="modal-header d-flex justify-content-between">
-                <p> </p>
-                <h5 id="modalCreatePost">
+                <p></p>
+                <h5 class="pl-4" id="modalCreatePost">
                 criar postagem</h5>
 
                 <button type="button"
-                class="close ml-0-imp"
+                class="close ml-0-imp text-white"
                 data-dismiss="modal"
                 aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -163,36 +198,29 @@ aria-hidden="true">
 
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="titulo">
-                    título</label>
-
-                    <input [(ngModel)]='postagem.titulo'
-                    type="text"
-                    class="form-control"
-                    id="titulo">
-                </div>
-
-                <div class="form-group">
-                    <label for="text">
-                    texto</label>
-
                     <textarea [(ngModel)]='postagem.conteudo'
                     class="form-control"
                     id="text"
                     name="text"
                     rows="5"
-                    placeholder=""></textarea>
+                    placeholder="no que você está ligado?"></textarea>
+                </div>
+
+                <div class="form-group justify-content-center">                    
+                    <input [(ngModel)]='postagem.linkMidia'
+                    class="form-control"
+                    id="midia"
+                    name="midia"
+                    placeholder="insira aqui o link da mídia"> 
                 </div>
 
                 <div class="form-group">
-                    <label for="tema">escolha um tema ou
-                        <a data-dismiss="modal" routerLink="/tema">
-                        registre um novo</a>
-                        : </label>
-
-                    <select class="form-control" [(ngModel)]='idTema'
+                    <select 
+                    [(ngModel)]='idTema'
+                    class="form-control"
                     id="tema" (change)='findByIdTema'
                     name="tema">
+                        <option value="">selecione um tema</option>
                         <option *ngFor='let item of listaTemas'
                         value="{{item.idTema}}">
                         {{item.tema}}
@@ -210,7 +238,7 @@ aria-hidden="true">
 
                 <button
                 type="submit"
-                class="btn btn-primary btn-lg btn-block" (click)='publicar()'>
+                class="btn btn-blue btn-lg btn-block" (click)='publicar()'>
                 postar</button>
             </div>
         </div>
