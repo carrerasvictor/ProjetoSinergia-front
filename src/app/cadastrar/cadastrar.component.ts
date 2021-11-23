@@ -37,7 +37,7 @@ export class CadastrarComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario;
 
     if(this.usuario.senha.length <=7 || this.confirmarSenha.length <= 7){
-      this.alertas.showAlertSuccess('Favor digitar senha de no minimo 8 digitos');
+      this.alertas.showAlertDanger('Favor digitar senha de no minimo 8 digitos');
     }
 
     if (this.usuario.foto == null) {
