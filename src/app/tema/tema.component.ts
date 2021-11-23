@@ -26,8 +26,15 @@ export class TemaComponent implements OnInit {
       this.alertas.showAlertInfo('Sua sessão expirou! Faça login novamente');
       this.router.navigate(['/entrar']);
     }
+
+    if(environment.tipo != 'admin'){
+      this.alertas.showAlertInfo('Somente o Administrador do site pode cadastrar um tema!')
+      this.router.navigate(['/inicio'])
+    }
+
     this.findAllTemas();
   }
+
   findAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp;
