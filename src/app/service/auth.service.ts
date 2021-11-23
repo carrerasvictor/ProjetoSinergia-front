@@ -12,7 +12,7 @@ import { Usuario } from '../model/Usuario';
 })
 export class AuthService {
   router: any;
-
+  
 
   constructor(
     private http: HttpClient
@@ -41,10 +41,11 @@ export class AuthService {
   getByIdUser(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://sinergiasocial.herokuapp.com/usuarios/${id}`, this.token)
   }
-
   atualizar(usuario: Usuario): Observable<Usuario> {
     return this.http.put<Usuario>('https://sinergiasocial.herokuapp.com/usuarios/atualizar', usuario);
   }
+  
+  
 
   logado(){
     let ok: boolean = false;
@@ -61,6 +62,8 @@ export class AuthService {
     environment.foto = ''
     environment.token = ''
   }
+
+  
 }
 
 

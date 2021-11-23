@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Tema } from '../model/Tema';
+import { PostagemDeleteComponent } from '../delete/postagem-delete/postagem-delete.component';
 import { AlertasService } from '../service/alertas.service';
 
 @Component({
@@ -17,21 +18,18 @@ import { AlertasService } from '../service/alertas.service';
 export class InicioComponent implements OnInit {
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
-  tituloPost: string;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
-  nomeTema: string;
 
   nome = environment.nomeCompleto;
 
   usuario: Usuario = new Usuario();
   idUsuario = environment.idUsuario;
-  nomeUsuario: string;
 
-  key = 'data';
-  reverse = true;
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
@@ -94,29 +92,5 @@ export class InicioComponent implements OnInit {
         this.postagem = new Postagem();
         this.getAllPostagens();
       });
-  }
-
-  findByTituloPostagem() {
-    if (this.tituloPost == '') {
-      this.getAllPostagens();
-    } else {
-      this.postagemService
-        .getByTituloPostagem(this.tituloPost)
-        .subscribe((resp: Postagem[]) => {
-          this.listaPostagens = resp;
-        });
-    }
-  }
-
-  findByNomeTema() {
-    if (this.nomeTema == '') {
-      this.getAllTemas();
-    } else {
-      this.temaService
-        .getByNomeTema(this.nomeTema)
-        .subscribe((resp: Tema[]) => {
-          this.listaTemas = resp;
-        });
-    }
   }
 }
