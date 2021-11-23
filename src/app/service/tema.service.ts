@@ -10,7 +10,7 @@ import { Tema } from '../model/Tema';
 export class TemaService {
 
   constructor(private http: HttpClient) { }
-
+  
   token = {
     headers: new HttpHeaders().set('Authorization',environment.token)
   }
@@ -21,10 +21,6 @@ export class TemaService {
 
   getbyIdTema(id: number): Observable<Tema>{
     return this.http.get<Tema>(`https://sinergiasocial.herokuapp.com/temas/${id}`, this.token)
-  }
-
-  getByNomeTema(tema: string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://sinergiasocial.herokuapp.com/temas/tema/${tema}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
