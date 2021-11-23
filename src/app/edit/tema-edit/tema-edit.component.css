@@ -1,0 +1,44 @@
+.bg-black{
+  background-color: #000000 !important;
+}
+
+.bg-blur{
+  background: #27272746 !important;
+  backdrop-filter: blur(56px);
+  width: 500px;
+  border-radius: 10px;
+}
+
+.form-group{
+  margin-left: -37px;
+  margin-right: 0;
+  color: white;
+  width: 300px;
+}
+
+.btn-orange{
+  background-color: #FF9900;
+  color: white;
+}
+
+.btn-azul{
+  background-color: #0094FF;
+  color: white;
+}
+
+input{
+  background-color: #ffffff20;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus{
+  background-color: #ffffff20;
+  color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
+}
+
