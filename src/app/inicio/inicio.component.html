@@ -5,7 +5,6 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
 
-<<<<<<< HEAD
                     <div class="nav flex-column nav-pills mb-3 size-pills" 
                     id="v-pills-tab" 
                     role="tablist" 
@@ -26,69 +25,6 @@
                         role="tab" 
                         aria-controls="v-pills-minhas" 
                         aria-selected="false">Minhas</a>
-=======
-        <div class="col-md-6 d-flex justify-content-center">
-            <img
-            src="../../assets/img/planofundo2.png"
-            alt="mensagens enviadas"
-            width="500px"
-            height="500px">
-        </div>
-    </div>
-</div>
-<div class="container-fluid bg-black py-5">
-<div class="container mb-5 mt-5" id="postagens">
-    <nav>
-        <div class="nav nav-tabs d-flex justify-content-center font-weight-bold mb-4"
-        id="nav-tab"
-        role="tablist">
-            <a class="nav-link active text-secondary"
-            id="nav-home-tab"
-            href="#todas"
-            data-toggle="tab"
-            role="tab"
-            aria-controls="nav-allPosts"
-            aria-selected="true">
-            todas as postagens</a>
-
-            <a (click)='findByIdUser()'
-            class="nav-link text-secondary font-weight-bold"
-            id="nav-profile-tab"
-            href="#minhas"
-            data-toggle="tab"
-            role="tab"
-            aria-controls="nav-myPosts"
-            aria-selected="false">
-            minhas postagens</a>
-
-            <a class="nav-link text-secondary font-weight-bold"
-            id="nav-contact-tab"
-            data-toggle="tab"
-            href="#porTema"
-            role="tab"
-            aria-controls="nav-byTheme"
-            aria-selected="false">
-            por tema</a>
-        </div>
-    </nav>
-
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active"
-        id="todas"
-        role="tabpanel"
-        aria-labelledby="nav-todas-tab">
-
-            <div>
-                <div class="card-columns ">
-                    <div class="card text-center"
-                    *ngFor='let post of listaPostagens | orderBy : key : reverse'>
-                        <div class="card-body">
-                            <h5 class="card-title">{{post.titulo}}</h5>
-                            <p class="card-text">{{post.conteudo}}</p>
-                            <p class="card-text"><small class="text-muted">{{post.date | date: 'dd/MM/yyyy'}} às {{post.date | date: 'HH:mm'}}</small></p>
-                            <p class="card-text"><small class="text-muted"> por: {{post.usuarioRelacionado.nomeCompleto}}</small></p>
-                        </div>
->>>>>>> 9f6cbe85fd14d006ac9edcaa1e72ceb398e9032a
                     </div>
                     
                     <!--<div class="btn-group-vertical mb-3" 
@@ -199,24 +135,6 @@
                                 <a class="dropdown-item" href="#">subtema</a>
                                 <a class="dropdown-item" href="#">subtema</a>
                             </div>
-=======
-        <div class="tab-pane fade"
-        id="minhas"
-        role="tabpanel"
-        aria-labelledby="nav-minhas-tab">
-
-            <div>
-                <div class="card-columns">
-                    <div class="card text-center"
-                    *ngFor='let item of usuario.postagens | orderBy : key : reverse'>
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.titulo}}</h5>
-                            <p class="card-text">{{item.conteudo}}</p>
-                            <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
-
-                            <a [routerLink]="['/postagem-edit', item.idPostagem]" class="text-info mr-3" href="">Editar</a>
-                            <a  class="text-danger" [routerLink]="['/postagem-delete', item.idPostagem]" >Apagar</a>
->>>>>>> 9f6cbe85fd14d006ac9edcaa1e72ceb398e9032a
                         </div>
                     </div>
 
@@ -225,7 +143,6 @@
 
         </div>
 
-<<<<<<< HEAD
         <div class="col-md-6 pt-5">
             
             <div class="box mb-3" 
@@ -236,25 +153,6 @@
                 id="criarPost">
                 <i class="fa fa-pencil mr-2" aria-hidden="true"></i>
                 No que você está ligado?</a>
-=======
-        <div class="tab-pane fade"
-        id="porTema"
-        role="tabpanel"
-        aria-labelledby="nav-porTema-tab">
-
-            <div>
-                <div class="card-columns"
-                *ngFor='let tema of listaTemas | orderBy : key : reverse'>
-                    <div class="card text-center" *ngFor='let post of tema.postagens'>
-                        <div class="card-body">
-                            <h5 class="card-title">{{post.titulo}}</h5>
-                            <p class="card-text">{{post.conteudo}}</p>
-                            <p class="card-text"><small class="text-muted">{{post.date | date: 'dd/MM/yyyy'}} às {{post.date | date: 'HH:mm'}}</small></p>
-                            <p class="card-text"><small class="text-muted"> por: {{post.usuarioRelacionado.nomeCompleto}}</small></p>
-                        </div>
-                    </div>
-                </div>
->>>>>>> 9f6cbe85fd14d006ac9edcaa1e72ceb398e9032a
             </div>
 
             <div class="tab-content" id="v-pills-tabContent">
