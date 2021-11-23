@@ -16,11 +16,17 @@
 .form-group{
   margin-left: 100px;
   margin-right: 100px;
-  color: #FF9900;
+  color: white;
 }
 
-.text-orange{
-  color: #FF9900;
+.btn-orange{
+  background-color: #FF9900;
+  color: white;
+}
+
+.btn-azul{
+  background-color: #0094FF;
+  color: white;
 }
 
 input{
