@@ -7,6 +7,31 @@
     backdrop-filter: blur(56px);
 }
 
+.bg-gray{
+    background: #272727;
+}
+
+.text-config{
+    color: white;
+    font: 100;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #00000015;
+}
+
+.dropdown-item {
+    font-weight: 100;
+    font-size: 11pt;
+    padding: 0.25rem 1.25rem;
+}
+
+.dropdown-menu{
+    border: none;
+}
+
 .fs-16{
     font-size: 16pt;
 }
