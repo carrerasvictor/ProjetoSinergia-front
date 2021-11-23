@@ -23,6 +23,8 @@ export class EntrarComponent implements OnInit {
     this.auth.emptyToken()
   }
 
+  
+
   entrar() {
     this.auth.entrar(this.usuarioLogin).subscribe((resp: CredenciaisDTO) => {
       this.usuarioLogin = resp;
@@ -32,6 +34,7 @@ export class EntrarComponent implements OnInit {
       environment.token = this.usuarioLogin.token
       environment.nomeCompleto = this.usuarioLogin.nome
       environment.foto = this.usuarioLogin.foto
+      environment.tipo = this.usuarioLogin.tipo
 
       //console.log(environment.token)
       this.router.navigate(['/inicio']);
@@ -39,9 +42,15 @@ export class EntrarComponent implements OnInit {
       if (erro.status == 400) {
         alert("Usuário ou senha inválidos!");
       }
+
+      if (environment.tipo != 'adm'){
+        alert("Você precisa ser adm para acessar essa rota");
+        this.router.navigate(['/inicio'])
+      }
+      
     })
   }
-
 }
+
 
 

@@ -52,6 +52,19 @@ export class CadastrarComponent implements OnInit {
           alert("Usuário cadastrado com sucesso!")
         })
 
+        if (this.usuario.senha.length <= 7 || this.confirmarSenha.length <= 7) {
+          alert('Favor digitar senha de no minimo 8 digitos.');
+  
+        } else {
+  
+          console.log(this.usuario)
+          this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+  
+            this.usuario = resp;
+            this.router.navigate(["/entrar"])
+            alert("Usuário cadastrado com sucesso!")
+          })
+
     if(this.usuario.senha != this.confirmarSenha) {
         alert('As senhas estão incorretas.');
 
@@ -71,4 +84,4 @@ export class CadastrarComponent implements OnInit {
 
 }
 
-
+}
