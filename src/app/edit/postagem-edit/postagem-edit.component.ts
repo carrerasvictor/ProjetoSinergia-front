@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from './../../model/Postagem';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-postagem-edit',
@@ -22,14 +23,15 @@ export class PostagemEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0);
 
     if (environment.token == '') {
-      alert('Sua sessão expirou! Faça login novamente');
+      this.alertas.showAlertInfo('Sua sessão expirou! Faça login novamente');
       this.router.navigate(['/entrar']);
     }
     let id = this.route.snapshot.params['id'];
@@ -63,7 +65,7 @@ export class PostagemEditComponent implements OnInit {
       .putPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem atualizada com sucesso!');
+        this.alertas.showAlertSuccess('Postagem atualizada com sucesso!');
         this.router.navigate(['/inicio']);
       });
   }

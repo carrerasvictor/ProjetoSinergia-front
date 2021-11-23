@@ -69,15 +69,21 @@ p{
     min-width: 15vw;
 }
 
+.deco-none{
+    text-decoration: none;
+}
+
 .voltar{
-    animation: is-bouncing 0.7s ease alternate infinite;
-    display: grid;
+    animation: is-bouncing 0.95s ease alternate infinite;
     place-items: left;
-    height: 900px;
-  
-  }
-  @keyframes is-bouncing {
-    to{
-      transform: translateX(15px);
+}
+
+.voltar a:hover{
+    color: blue;
+}
+
+@keyframes is-bouncing {
+to{
+    transform: translateX(10px);
     }
-  }
+}

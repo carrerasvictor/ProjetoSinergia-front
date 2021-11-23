@@ -1,0 +1,60 @@
+.mt-8{
+  margin-top: 8vw;
+}
+
+.bg-black{
+  background-color: #000000 !important;
+}
+
+.bg-blur{
+  background: #27272746 !important;
+  backdrop-filter: blur(56px);
+  width: 800px;
+  border-radius: 10px;
+}
+
+.form-group{
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #FF9900;
+}
+
+.text-orange{
+  color: #FF9900;
+}
+
+input{
+  background-color: #ffffff20;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus{
+  background-color: #ffffff20;
+  color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
+}
+
+input, select{
+  background-color: #ffffff20;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus{
+  background-color: #ffffff20;
+  color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
+}
+
+input::placeholder{
+  color: rgb(128, 128, 128);
+}
