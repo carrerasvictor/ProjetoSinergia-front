@@ -6,18 +6,15 @@ import { environment } from 'src/environments/environment.prod';
 import { CredenciaisDTO } from '../model/CredenciaisDTO';
 import { Usuario } from '../model/Usuario';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   router: any;
-  
 
   constructor(
     private http: HttpClient
   ) { }
-
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
@@ -44,8 +41,6 @@ export class AuthService {
   atualizar(usuario: Usuario): Observable<Usuario> {
     return this.http.put<Usuario>('https://sinergiasocial.herokuapp.com/usuarios/atualizar', usuario);
   }
-  
-  
 
   logado(){
     let ok: boolean = false;
@@ -63,7 +58,14 @@ export class AuthService {
     environment.token = ''
   }
 
-  
+  admin(){
+    let ok: boolean = false;
+
+    if (environment.tipo == 'admin'){
+      ok = true
+    }
+    return ok
+  }
 }
 
 
