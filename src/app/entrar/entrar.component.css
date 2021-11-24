@@ -61,10 +61,6 @@ input::placeholder{
     color: rgb(128, 128, 128);
 }
 
-button{
-    border-radius: 7px;
-}
-
 p{
     min-width: 15vw;
 }
