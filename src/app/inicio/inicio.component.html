@@ -18,7 +18,8 @@
                         aria-controls="v-pills-todas" 
                         aria-selected="true">Todas</a>
 
-                        <a class="nav-link bg-blur text-white text-left" 
+                        <a (click)='findByIdUser()'
+                        class="nav-link bg-blur text-white text-left" 
                         id="v-pills-minhas-tab" 
                         data-toggle="pill" 
                         href="#v-pills-minhas" 
@@ -161,7 +162,8 @@
                 role="tabpanel" 
                 aria-labelledby="v-pills-todas-tab">
                 
-                    <div class="card mt-3 bg-gray text-white border-10" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                    <div class="card mt-3 bg-gray text-white border-10" 
+                    *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                         
                         <div class="card-header d-flex align-items-center border-0 bg-transparent">
                             <img 
@@ -181,7 +183,8 @@
         
                         <div class="card-body">
                             <p class="peso-100 fs-11">{{item.conteudo}}</p>
-                        
+                            <p class="peso-100 fs-11">#{{item.temaRelacionado.tema}}</p>
+
                             <div class="d-flex justify-content-center">
                                 <img
                                 *ngIf="!(item.linkMidia == null || item.linkMidia =='')"
@@ -227,7 +230,42 @@
                 id="v-pills-minhas" 
                 role="tabpanel" 
                 aria-labelledby="v-pills-minhas-tab">
-                minhaaaaaaaaas</div>
+
+                <div class="card mt-3 bg-gray text-white border-10" 
+                *ngFor='let item of usuario.postagens | orderBy : key : reverse'>
+                    
+                    <div class="card-header d-flex align-items-center border-0 bg-transparent">
+                        <img 
+                            class="img-fluid rounded-circle"
+                            width="40px"
+                            height="40px"
+                            src="{{usuario.foto}}" alt="foto de perfil de {{usuario.nomeCompleto}}">
+                        
+                        <div class="ml-3">
+                            <p class="fs-11 peso-400 m-neg1">{{usuario.nomeCompleto}}</p>
+                            <small class="text-muted m-0 text-white">
+                                {{item.date | date : 'MMMM d, y' : '' : 'pt-BR'}}
+                                às {{item.date | date: 'shortTime'}}
+                            </small>
+                        </div>
+                    </div>
+    
+                    <div class="card-body">
+                        <p class="peso-100 fs-11">{{item.conteudo}}</p>
+                        <p class="peso-100 fs-11">#{{item.temaRelacionado.tema}}</p>
+
+                        <div class="d-flex justify-content-center">
+                            <img
+                            *ngIf="!(item.linkMidia == null || item.linkMidia =='')"
+                            class="text-muted"
+                            src="{{item.linkMidia}}" 
+                            width="90%"
+                            alt="postagem de {{usuario.nomeCompleto}}">
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
             </div>
     
         </div>

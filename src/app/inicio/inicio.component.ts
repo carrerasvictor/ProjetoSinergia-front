@@ -71,7 +71,6 @@ export class InicioComponent implements OnInit {
   }
 
   findByIdUser() {
-    console.log(environment);
     this.auth.getByIdUser(this.idUsuario).subscribe((resp: Usuario) => {
       this.usuario = resp;
     });
