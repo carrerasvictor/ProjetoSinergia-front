@@ -1,27 +1,21 @@
-
-/* >>>>>>>>>> margin-padding <<<<<<<<<< */
 .px-10{
     padding-left: 5vw;
     padding-right: 5vw;
 }
 
-/* >>>>>>>>>> fonts size <<<<<<<<<< */
+.bg-blur{
+    background: #27272746;
+    backdrop-filter: blur(56px);
+}
+
 .fs-16{
     font-size: 16pt;
 }
 
-.fs-32{
-    font-size: 32pt;
+.fs-28{
+    font-size: 28pt;
     margin: -5px;
     padding: 0px;
-}
-
-/* >>>>>>>>>> bottons <<<<<<<<<< */
-.button {
-    font-size: 12pt;
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
 }
 
 .btn-outline-orange{
@@ -48,14 +42,6 @@
     color: black;
 }
 
-/* >>>>>>>>>> links <<<<<<<<<< */
-.item-nav{
-    margin-right: 1vw;
-    font-size: 14pt;
-    color: #ffffff90;
-    text-decoration: none;
-}
-
 .item-nav-active{
     margin-right: 1vw;
     font-size: 16pt;
@@ -63,7 +49,6 @@
     text-decoration: none;
 }
 
-/* >>>>>>>>>> colors <<<<<<<<<< */
 .color-black{
     color: black;
 }
@@ -73,21 +58,18 @@
     
 }
 
-/* >>>>>>>>>> background <<<<<<<<<< */
-.bg-black{
-    background-color: black;
+.nav-item.active{
+    color: transparent !important;
 }
 
-/* >>>>>>>>>> effects <<<<<<<<<< */
-.b-bottom{
-    border-bottom: 2px ;
-    color: #FF9900;
+.bg-black{
+    background-color: black;
 }
 
 a{
     cursor: pointer;
 }
-.bg-blur{
-    background: #27272746;
-    backdrop-filter: blur(56px);
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
 }

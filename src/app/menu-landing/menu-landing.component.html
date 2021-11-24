@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark px-10 bg-blur fixed-top">
-    <img class="mb-3 " src="../../assets/img/logo_laranja.png"
+    <img class="mb-2 mr-3" src="../../assets/img/logo_laranja.png"
         alt="logotipo de sinergia"
         width="40px"
         height="auto">
 
-    <a class="navbar-brand font-weight-bold fs-32 mr-5 ml-2"> SINERGIA</a>
+    <a class="navbar-brand font-weight-bold fs-28 mr-5 ml-2"> Sinergia</a>
 
     <button class="navbar-toggler"
     type="button"
@@ -16,22 +16,40 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto d-flex align-items-baseline">
-            <li class="nav-item active d-flex align-items-center b-bottom">
-                <a class="item-nav-active font-weight-bolder" href="#"> início <span class="sr-only">(current)</span></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mt-2">
+            <li class="nav-item active color-transparent">
+                <a class="nav-link" routerLink="/inicio-landing">início <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/sobre">sobre nós</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/projeto-landing">projeto</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex align-items-baseline">
+            <li class="nav-item active1 d-flex align-items-center">
+                <a class="item-nav" href="#"> início <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="item-nav" routerLink="/sobre"> sobre nós</a>
-              <a class="item-nav" href="#projeto-landing"> projeto</a>
             </li>
 
+            <li class="nav-item">
+                <a class="item-nav" href="#projeto-landing"> projeto</a>
+            </li>
         </ul>
-    </div>
+    </div>-->
 
     <div class="d-flex align-items-center">
-        <button class="btn button btn-outline-orange my-2 my-sm-0 mr-3" type="submit" routerLink='/entrar'> entrar</button>
+        <button class="btn button btn-outline-orange my-2 my-sm-0 mr-3" type="submit" routerLink='/entrar'> entre</button>
         <button class="btn button btn-orange my-2 my-sm-0" type="submit" routerLink='/cadastrar'> cadastre-se</button>
     </div>
 </nav>
