@@ -196,33 +196,6 @@
                         </div>
                     </div>
     
-                    <!--<div class="card-columns">
-                        <div class="card" *ngFor='let item of listaPostagens'>
-                            <div class="card-body">
-                                
-                                <img 
-                                class="img-fluid rounded-circle"
-                                width="50px"
-                                height="50px"
-                                src="{{item.usuarioRelacionado.foto}}" alt="foto de perfil de {{item.usuarioRelacionado.nomeCompleto}}">
-    
-                                <h5 class="card-title">{{item.usuarioRelacionado.nomeCompleto}}</h5>
-    
-                                <p class="card-text">{{item.conteudo}}</p>
-    
-                                <img src="{{item.linkMidia}}" alt="">
-    
-                                <p class="card-text">  
-                                    <small class="text-muted">
-                                    {{item.date | date: 'dd/MM/yyyy'}}
-                                    às {{item.date | date: 'HH:mm'}}</small>
-                                </p>
-                                
-                                <small class="text-muted"> #{{item.temaRelacionado.tema}}</small>
-                            </div>
-                        </div>
-                    </div>-->
-    
                 </div>
     
                 <div 
@@ -230,44 +203,58 @@
                 id="v-pills-minhas" 
                 role="tabpanel" 
                 aria-labelledby="v-pills-minhas-tab">
-
-                <div class="card mt-3 bg-gray text-white border-10" 
-                *ngFor='let item of usuario.postagens | orderBy : key : reverse'>
-                    
-                    <div class="card-header d-flex align-items-center border-0 bg-transparent">
-                        <img 
-                            class="img-fluid rounded-circle"
-                            width="40px"
-                            height="40px"
-                            src="{{usuario.foto}}" alt="foto de perfil de {{usuario.nomeCompleto}}">
-                        
-                        <div class="ml-3">
-                            <p class="fs-11 peso-400 m-neg1">{{usuario.nomeCompleto}}</p>
-                            <small class="text-muted m-0 text-white">
-                                {{item.date | date : 'MMMM d, y' : '' : 'pt-BR'}}
-                                às {{item.date | date: 'shortTime'}}
-                            </small>
-                        </div>
-                    </div>
-    
-                    <div class="card-body">
-                        <p class="peso-100 fs-11">{{item.conteudo}}</p>
-                        <p class="peso-100 fs-11">#{{item.temaRelacionado.tema}}</p>
-
-                        <div class="d-flex justify-content-center">
-                            <img
-                            *ngIf="!(item.linkMidia == null || item.linkMidia =='')"
-                            class="text-muted"
-                            src="{{item.linkMidia}}" 
-                            width="90%"
-                            alt="postagem de {{usuario.nomeCompleto}}">
-                        </div>
-                    </div>
-                </div>
                 
+                    <div class="card mt-3 bg-gray text-white border-10" 
+                    *ngFor='let item of usuario.postagens | orderBy : key : reverse'>
+                        
+                        <div class="card-header d-flex align-items-center justify-content-between border-0 bg-transparent">
+                            <div class="d-flex align-content-center">
+                                <img 
+                                    class="img-fluid rounded-circle"
+                                    width="40px"
+                                    height="40px"
+                                    src="{{usuario.foto}}" alt="foto de perfil de {{usuario.nomeCompleto}}">
+                                    
+                                <div class="ml-3">
+                                    <p class="fs-11 peso-400 m-neg1">{{usuario.nomeCompleto}}</p>
+                                    <small class="text-muted m-0 text-white">
+                                        {{item.date | date : 'MMMM d, y' : '' : 'pt-BR'}}
+                                        às {{item.date | date: 'shortTime'}}
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a class="bg-transparent border-0 ml-0-imp text-white d-flex justify-content-end"
+                                data-toggle="dropdown">
+                                <i class="fs-16 peso-100 fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </a>
+
+                                <div class="dropdown-menu right-0 bg-gray text-white" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-config" [routerLink]="['/postagem-edit', item.idPostagem]"> editar</a>
+                                    <a class="dropdown-item text-config" [routerLink]="['/postagem-delete', item.idPostagem]"> excluir</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-body">
+                            <p class="peso-100 fs-11">{{item.conteudo}}</p>
+                            <p class="peso-100 fs-11">#{{item.temaRelacionado.tema}}</p>
+            
+                            <div class="d-flex justify-content-center">
+                                <img
+                                *ngIf="!(item.linkMidia == null || item.linkMidia =='')"
+                                class="text-muted"
+                                src="{{item.linkMidia}}" 
+                                width="90%"
+                                alt="postagem de {{usuario.nomeCompleto}}">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-    
+        
         </div>
     </div>
 </div>
