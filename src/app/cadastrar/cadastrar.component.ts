@@ -30,7 +30,13 @@ export class CadastrarComponent implements OnInit {
   }
 
   tipoUser(event: any) {
-    this.tipoUsuario = event.target.value;
+    if(this.tipoUsuario == null || this.tipoUsuario == ''){
+      this.tipoUsuario = 'user'
+    } 
+    
+    else{
+      this.tipoUsuario = event.target.value;
+    }
   }
 
   cadastrar() {
