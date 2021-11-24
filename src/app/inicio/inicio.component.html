@@ -143,25 +143,85 @@
         </div>
 
         <div class="col-md-6 pt-5">
-            
+
             <div class="box mb-3" 
             data-toggle="modal"
             data-target="#novaPostagem">
                 <a 
-                class="text-grey"
+                class="text-lgray"
                 id="criarPost">
-                <i class="fa fa-pencil mr-2" aria-hidden="true"></i>
+                <i class="fa fa-pencil mr-2 mb-2" aria-hidden="true"></i>
                 No que você está ligado?</a>
             </div>
-
-            <div class="tab-content" id="v-pills-tabContent">
+    
+            <div class="tab-content mt-3" id="v-pills-tabContent">
                 <div 
                 class="tab-pane fade show active" 
                 id="v-pills-todas" 
                 role="tabpanel" 
                 aria-labelledby="v-pills-todas-tab">
-                todaaaaaaaaaas</div>
                 
+                    <div class="card mt-3 bg-gray text-white border-10" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                        
+                        <div class="card-header d-flex align-items-center border-0 bg-transparent">
+                            <img 
+                                class="img-fluid rounded-circle"
+                                width="40px"
+                                height="40px"
+                                src="{{item.usuarioRelacionado.foto}}" alt="foto de perfil de {{item.usuarioRelacionado.nomeCompleto}}">
+                            
+                            <div class="ml-3">
+                                <p class="fs-11 peso-400 m-neg1">{{item.usuarioRelacionado.nomeCompleto}}</p>
+                                <small class="text-muted m-0 text-white">
+                                    {{item.date | date : 'MMMM d, y' : '' : 'pt-BR'}}
+                                    às {{item.date | date: 'shortTime'}}
+                                </small>
+                            </div>
+                        </div>
+        
+                        <div class="card-body">
+                            <p class="peso-100 fs-11">{{item.conteudo}}</p>
+                        
+                            <div class="d-flex justify-content-center">
+                                <img
+                                *ngIf="!(item.linkMidia == null || item.linkMidia =='')"
+                                class="text-muted"
+                                src="{{item.linkMidia}}" 
+                                width="90%"
+                                alt="postagem de {{item.usuarioRelacionado.nomeCompleto}}">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--<div class="card-columns">
+                        <div class="card" *ngFor='let item of listaPostagens'>
+                            <div class="card-body">
+                                
+                                <img 
+                                class="img-fluid rounded-circle"
+                                width="50px"
+                                height="50px"
+                                src="{{item.usuarioRelacionado.foto}}" alt="foto de perfil de {{item.usuarioRelacionado.nomeCompleto}}">
+    
+                                <h5 class="card-title">{{item.usuarioRelacionado.nomeCompleto}}</h5>
+    
+                                <p class="card-text">{{item.conteudo}}</p>
+    
+                                <img src="{{item.linkMidia}}" alt="">
+    
+                                <p class="card-text">  
+                                    <small class="text-muted">
+                                    {{item.date | date: 'dd/MM/yyyy'}}
+                                    às {{item.date | date: 'HH:mm'}}</small>
+                                </p>
+                                
+                                <small class="text-muted"> #{{item.temaRelacionado.tema}}</small>
+                            </div>
+                        </div>
+                    </div>-->
+    
+                </div>
+    
                 <div 
                 class="tab-pane fade" 
                 id="v-pills-minhas" 
@@ -169,10 +229,11 @@
                 aria-labelledby="v-pills-minhas-tab">
                 minhaaaaaaaaas</div>
             </div>
-
+    
         </div>
     </div>
 </div>
+
 
 <div class="modal fade"
 id="novaPostagem"
