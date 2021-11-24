@@ -61,12 +61,8 @@ input::placeholder{
     color: rgb(128, 128, 128);
 }
 
-button{
-    border-radius: 7px;
-}
-
 p{
-  min-width: 15vw;
+    min-width: 15vw;
 }
 
 .voltar{
@@ -74,11 +70,11 @@ p{
     display: grid;
     place-items: left;
     height: 900px;
-  
-  }
-  @keyframes is-bouncing {
+
+}
+@keyframes is-bouncing {
     to{
-      transform: translateX(15px);
+    transform: translateX(15px);
     }
-  }
+}
 
