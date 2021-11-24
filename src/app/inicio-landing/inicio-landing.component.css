@@ -1,24 +1,5 @@
-.fundo-back {
+.bg-black {
     background-color: black;
-    height: 78vh;
-}
-
-.button {
-    font-size: 12pt;
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-.btn-outline-orange {
-    border: 1px solid #FF9900;
-    color: #FF9900;
-}
-
-.btn-outline-orange:hover {
-    border: 1px solid #FF9900;
-    background-color: #FF9900;
-    color: white;
 }
 
 .btn-orange {
@@ -29,70 +10,25 @@
 
 .btn-orange:hover {
     border: 1px solid #FF9900;
-    color: black;
-}
-
-.imagem {
-    width: 500px;
-}
-
-.centro {
-    justify-content: center;
-    margin-top: 15%;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 5px 5px;
-    display: inline-block;
-    border: 0;
-    border-bottom: 2px solid #FF9900;
     background-color: transparent;
-    outline: none !important;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    border-radius: 0;
-}
-
-.form-group {
-    position: relative;
-    padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.form-group label {
-    color: #FF9900;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 13px;
-    transition: all .3s ease-out;
-}
-
-.form-group input:focus {
-    border-bottom: 2px solid #FF9900;
-}
-
-.form-group input:focus+label,
-.form-group input:valid+label {
-    font-size: 13px;
-    margin-top: 0;
     color: #FF9900;
 }
 
-.cor:hover {
-    color: black;
-    background-color: #FF9900;
+.fs-30 {
+    font-size: 30pt;
+    font-weight: 700 ;
 }
 
-.fonte {
-    font-size: 14pt;
-    font-weight: 100;
-}
-
-.fs-26 {
+.fs-16 {
     font-size: 16pt;
-    font-weight: bolder;
+    font-weight: 400 ;
+}
+
+.fs-12 {
+    font-size: 12pt;
+    font-weight: 100 ;
+}
+
+p{
+    margin: 0rem;
 }
