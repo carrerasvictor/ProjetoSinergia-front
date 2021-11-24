@@ -25,7 +25,7 @@
                         </a>
                         <div class="dropdown-menu right-0 bg-gray" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item text-config" [routerLink]="['/usuario-edit', idUsuario]"> editar perfil</a>
-                            <hr class="bg-secondary">
+                            <hr class="bg-secondary mr-3 ml-3">
                             <a *ngIf="auth.admin()" class="dropdown-item text-config" [routerLink]="['/tema',]"> configurar temas</a>
                             <a class="dropdown-item text-config" (click)='sair()' routerLink='/entrar' > sair</a>
                         </div>
