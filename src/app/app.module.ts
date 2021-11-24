@@ -14,7 +14,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@angular/common';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { PostagemComponent } from './postagem/postagem.component';
@@ -26,6 +26,8 @@ import { InicioLandingComponent } from './inicio-landing/inicio-landing.componen
 import { ProjetoLandingComponent } from './projeto-landing/projeto-landing.component';
 import { AlertasComponent } from './alertas/alertas.component';
 
+import localePT from '@angular/common/locales/pt';
+registerLocaleData(localePT);
 
 
 @NgModule({
