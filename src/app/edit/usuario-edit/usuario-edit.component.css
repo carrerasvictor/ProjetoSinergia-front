@@ -1,7 +1,3 @@
-.mt-8{
-  margin-top: 8vw;
-}
-
 .bg-black{
   background-color: #000000 !important;
 }
@@ -29,22 +25,6 @@
   color: white;
 }
 
-input{
-  background-color: #ffffff20;
-  color: rgb(255, 255, 255);
-  font-weight: 100;
-  border: none;
-  border-radius: 5px;
-}
-
-input:focus{
-  background-color: #ffffff20;
-  color: rgb(128, 128, 128);
-  font-weight: 100 ;
-  border: none;
-  border-radius: 5px;
-}
-
 input, select{
   background-color: #ffffff20;
   color: rgb(255, 255, 255);
@@ -61,6 +41,10 @@ input:focus{
   border-radius: 5px;
 }
 
-input::placeholder{
+select:focus{
+  background-color: #ffffff20;
   color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
 }
