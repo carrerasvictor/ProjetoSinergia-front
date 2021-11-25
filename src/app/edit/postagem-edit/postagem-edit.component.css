@@ -1,0 +1,58 @@
+.bg-black{
+  background-color: #000000 !important;
+}
+
+.bg-blur{
+  background: #27272746 !important;
+  backdrop-filter: blur(56px);
+  width: 800px;
+  border-radius: 10px;
+}
+
+.form-group{
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
+}
+
+.btn-orange{
+  background-color: #FF9900;
+  color: white;
+}
+
+.btn-azul{
+  background-color: #0094FF;
+  color: white;
+}
+
+input, select, textarea{
+  background-color: #ffffff20;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus{
+  background-color: #ffffff20;
+  color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
+}
+
+select:focus{
+  background-color: #ffffff20;
+  color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea:focus{
+  background-color: #ffffff20;
+  color: rgb(128, 128, 128);
+  font-weight: 100 ;
+  border: none;
+  border-radius: 5px;
+}
