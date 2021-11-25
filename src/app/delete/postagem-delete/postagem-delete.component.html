@@ -1,22 +1,19 @@
-<div class="container mb-5 mt-5">
+<div class="container-fluid bg-black pt-5 pb-5">
+    <div class="container bg-blur">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h1 class="text-center text-white mt-3 mb-3">Apagar postagem</h1>
+                <p class="text-white text-center">
+                    Tem certeza que deseja apagar a postagem?
+                </p>
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center text-secondary">Apagar postagem</h1>
+        <div class="d-flex justify-content-center mb-5 mt-3">
+            <button class="btn btn-orange mr-4 mb-4" routerLink="/postagem">
+            cancelar
+          </button>
+            <button class="btn btn-azul mb-4" (click)="apagar()">apagar</button>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa postagem?</h4>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-danger mr-3" routerLink='/inicio'>Não</button>
-            <button class="btn btn-success" (click)='apagar()'>Sim</button>
-        </div>
-    </div>
-
 </div>
