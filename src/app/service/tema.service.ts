@@ -15,12 +15,22 @@ export class TemaService {
     headers: new HttpHeaders().set('Authorization',environment.token)
   }
 
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    }
+  }
+
   getAllTema(): Observable<Tema[]>{
     return this.http.get<Tema[]>('https://sinergiasocial.herokuapp.com/temas', this.token)
   }
 
   getbyIdTema(id: number): Observable<Tema>{
     return this.http.get<Tema>(`https://sinergiasocial.herokuapp.com/temas/${id}`, this.token)
+  }
+
+  getByTema(tema: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`https://sinergiasocial.herokuapp.com/temas/tema/${tema}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
