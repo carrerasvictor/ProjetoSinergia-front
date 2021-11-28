@@ -19,9 +19,10 @@ export class InicioComponent implements OnInit {
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
 
-  tema: Tema = new Tema();
-  listaTemas: Tema[];
-  idTema: number;
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  idTema: number
+  nomeTema: string
 
   nome = environment.nomeCompleto;
 
@@ -47,9 +48,11 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/entrar']);
     }
 
-    this.getAllTemas();
-    this.getAllPostagens();
-    this.auth.refreshToken();
+    this.getAllTemas()
+    this.getAllPostagens()
+
+    this.auth.refreshToken()
+    this.temaService.refreshToken()
   }
 
   getAllTemas() {
@@ -62,6 +65,18 @@ export class InicioComponent implements OnInit {
     this.temaService.getbyIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
     });
+  }
+
+  findByNomeTema() {
+    if(this.nomeTema == ''){
+      this.getAllTemas()
+    } 
+
+    else {
+      this.temaService.getByTema(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
   }
 
   getAllPostagens() {

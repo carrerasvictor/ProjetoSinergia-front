@@ -1,5 +1,18 @@
+body{
+    background-color: #000000 !important;
+}
+
 .bg-black{
     background-color: #000000 !important;
+}
+
+.bg-green{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #00FF66;
 }
 
 .bg-blur{
@@ -7,16 +20,33 @@
     backdrop-filter: blur(56px);
 }
 
+.fade {
+    transition: opacity -0.85s linear;
+    background-color: #000000be;
+}
+
 .color-white{
     color: #ffffff !important;
 }
 
-.border-10{
-    border-radius: 10px;
+.color-green{
+    color: #00FF66;
 }
 
 .color-blue{
     color: #0094FF;
+}
+
+.text-black{
+    color:#000000;
+}
+
+.size{
+    width: 90%;
+}
+
+.border-10{
+    border-radius: 10px;
 }
 
 textarea, input, select{
@@ -75,6 +105,10 @@ select:focus{
     align-items: center;
 }
 
+#buscaTema{
+    border: 1px solid #00FF66;
+}
+
 .text-lgray{
     text-decoration: none;
     color: #FFFFFF80;
@@ -129,6 +163,10 @@ select:focus{
 
 .fs-18{
     font-size: 18pt;
+}
+
+.fs-16{
+    font-size: 16pt;
 }
 
 .fs-12{
