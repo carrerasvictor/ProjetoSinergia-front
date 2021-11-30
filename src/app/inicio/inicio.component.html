@@ -9,32 +9,23 @@
                     id="v-pills-tab" 
                     role="tablist" 
                     aria-orientation="vertical">
+                        
+                        <a class="nav-link bg-blur text-white text-left active" 
+                        id="v-pills-todas-tab" 
+                        data-toggle="pill" 
+                        href="#v-pills-todas" 
+                        role="tab" 
+                        aria-controls="v-pills-todas" 
+                        aria-selected="true">Todas</a>
 
-                            <a class="nav-link bg-blur text-white text-left active" 
-                            id="v-pills-todas-tab" 
-                            data-toggle="pill" 
-                            href="#v-pills-todas" 
-                            role="tab" 
-                            aria-controls="v-pills-todas" 
-                            aria-selected="true">Todas</a>
-    
-                            <a (click)='findByIdUser()'
-                            class="nav-link bg-blur text-white text-left mb-4" 
-                            id="v-pills-minhas-tab" 
-                            data-toggle="pill" 
-                            href="#v-pills-minhas" 
-                            role="tab" 
-                            aria-controls="v-pills-minhas" 
-                            aria-selected="false">Minhas</a>
-                            
-                            <a class="nav-link bg-blur text-white text-left" 
-                            id="v-pills-tema-tab" 
-                            data-toggle="pill"
-                            href="#v-pills-tema" 
-                            role="tab" 
-                            aria-controls="v-pills-tema" 
-                            aria-selected="false">Tema</a>
-                            
+                        <a (click)='findByIdUser()'
+                        class="nav-link bg-blur text-white text-left" 
+                        id="v-pills-minhas-tab" 
+                        data-toggle="pill" 
+                        href="#v-pills-minhas" 
+                        role="tab" 
+                        aria-controls="v-pills-minhas" 
+                        aria-selected="false">Minhas</a>
                     </div>
                     
                     <!--<div class="btn-group-vertical mb-3" 
@@ -69,7 +60,7 @@
                 </div>
             </div>
             
-            <!--<div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-6">        
                     
                     <div class="btn-group-vertical mb-3" 
@@ -148,7 +139,7 @@
                     </div>
 
                 </div>
-            </div>-->
+            </div>
 
         </div>
 
@@ -165,8 +156,6 @@
             </div>
     
             <div class="tab-content mt-3" id="v-pills-tabContent">
-                
-<!-------- TODAS -------->                
                 <div 
                 class="tab-pane fade show active" 
                 id="v-pills-todas" 
@@ -206,9 +195,9 @@
                             </div>
                         </div>
                     </div>
+    
                 </div>
-
-<!-------- MINHAS -------->    
+    
                 <div 
                 class="tab-pane fade" 
                 id="v-pills-minhas" 
@@ -262,71 +251,10 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-
-<!-------- TEMAS -------->
-                <div 
-                class="tab-pane fade show active" 
-                id="v-pills-tema" 
-                role="tabpanel" 
-                aria-labelledby="v-pills-tema-tab">
-
-                    <div class="row d-flex justify-content-end pt-3">
-                        <div class="col-md-4">
-                            <div class="form-group d-flex align-items-center">
-                                <div>
-                                    <input class="form-control"
-                                    type="text"
-                                    id="buscaTema"
-                                    placeholder="Por qual tema procura? "
-                                    (keyup)='findByNomeTema()'
-                                    [(ngModel)]='nomeTema'>
-                                </div>
-
-                                <div class="ml-3 fs-14 bg-green rounded-circle">
-                                    <i class="fa fa-search text-black" aria-hidden="true"></i>                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div *ngFor='let tema of listaTemas'>
-                        <div class="card mt-3 bg-gray text-white border-10" 
-                        *ngFor='let item of tema.postagens | orderBy : key : reverse'>
-                            
-                            <div class="card-header d-flex align-items-center border-0 bg-transparent">
-                                <img 
-                                    class="img-fluid rounded-circle"
-                                    width="40px"
-                                    height="40px"
-                                    src="{{item.usuarioRelacionado.foto}}" alt="foto de perfil de {{item.usuarioRelacionado.nomeCompleto}}">
-                                
-                                <div class="ml-3">
-                                    <p class="fs-11 peso-400 m-neg1">{{item.usuarioRelacionado.nomeCompleto}}</p>
-                                    <small class="text-muted m-0 text-white">
-                                        {{item.date | date : 'MMMM d, y' : '' : 'pt-BR'}}
-                                        às {{item.date | date: 'shortTime'}}
-                                    </small>
-                                </div>
-                            </div>
-    
-                            <div class="card-body">
-                                <p class="peso-100 fs-11">{{item.conteudo}}</p>
-    
-                                <div class="d-flex justify-content-center">
-                                    <img
-                                    *ngIf="!(item.linkMidia == null || item.linkMidia =='')"
-                                    class="text-muted"
-                                    src="{{item.linkMidia}}" 
-                                    width="90%"
-                                    alt="postagem de {{item.usuarioRelacionado.nomeCompleto}}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        
         </div>
     </div>
 </div>
@@ -364,36 +292,26 @@ aria-hidden="true">
                     placeholder="no que você está ligado?"></textarea>
                 </div>
 
-                <div class="form-group d-flex justify-content-between align-items-center">
-                    <div class="mr-2 fs-14 bg-green rounded-circle">
-                        <i class="fa fa-picture-o text-black" aria-hidden="true"></i>                
-                    </div>
-                    
-                    <div class="size">
-                        <input [(ngModel)]='postagem.linkMidia'
-                        class="form-control"
-                        id="midia"
-                        name="midia"
-                        placeholder="insira aqui o link da imagem ou gif"> 
-                    </div>
+                <div class="form-group justify-content-center">                    
+                    <input [(ngModel)]='postagem.linkMidia'
+                    class="form-control"
+                    id="midia"
+                    name="midia"
+                    placeholder="insira aqui o link da mídia"> 
                 </div>
 
-                <div class="form-group d-flex justify-content-between align-items-center">
-                    <div class="mr-2 fs-16 bg-green rounded-circle">
-                        <i class="fa fa-comments-o text-black" aria-hidden="true"></i>
-                    </div>
-                    
-                    <div class="size">
-                        <select 
-                        [(ngModel)]='idTema'
-                        class="form-control"
-                        id="tema"
-                        name="tema"
-                        (change)='findByIdTema'>
-                            <option *ngFor='let item of listaTemas' value="{{item.idTema}}">
-                            {{item.tema}}</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <select 
+                    [(ngModel)]='idTema'
+                    class="form-control"
+                    id="tema" (change)='findByIdTema'
+                    name="tema">
+                        <option value="">selecione um tema</option>
+                        <option *ngFor='let item of listaTemas'
+                        value="{{item.idTema}}">
+                        {{item.tema}}
+                        </option>
+                    </select>
                 </div>
             </div>
 
