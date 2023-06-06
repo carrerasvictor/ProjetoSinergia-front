@@ -10,7 +10,7 @@ import { Tema } from '../model/Tema';
 export class TemaService {
 
   constructor(private http: HttpClient) { }
-  
+
   token = {
     headers: new HttpHeaders().set('Authorization',environment.token)
   }
@@ -22,27 +22,27 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('https://sinergiasocial.herokuapp.com/temas', this.token)
+    return this.http.get<Tema[]>('https://sinergia.onrender.com/temas', this.token)
   }
 
   getbyIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://sinergiasocial.herokuapp.com/temas/${id}`, this.token)
+    return this.http.get<Tema>(`https://sinergia.onrender.com/temas/${id}`, this.token)
   }
 
   getByTema(tema: string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://sinergiasocial.herokuapp.com/temas/tema/${tema}`, this.token)
+    return this.http.get<Tema[]>(`https://sinergia.onrender.com/temas/tema/${tema}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://sinergiasocial.herokuapp.com/temas', tema, this.token)
+    return this.http.post<Tema>('https://sinergia.onrender.com/temas', tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://sinergiasocial.herokuapp.com/temas', tema, this.token)
+    return this.http.put<Tema>('https://sinergia.onrender.com/temas', tema, this.token)
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`https://sinergiasocial.herokuapp.com/temas/${id}`, this.token)
+    return this.http.delete(`https://sinergia.onrender.com/temas/${id}`, this.token)
   }
 
 }

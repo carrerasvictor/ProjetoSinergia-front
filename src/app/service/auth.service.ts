@@ -28,18 +28,18 @@ export class AuthService {
 
   entrar(usuarioLogin: CredenciaisDTO): Observable<CredenciaisDTO> {
     return this.http.post<CredenciaisDTO>(
-      'https://sinergiasocial.herokuapp.com/usuarios/login', usuarioLogin);
+      'https://sinergia.onrender.com/usuarios/login', usuarioLogin);
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('https://sinergiasocial.herokuapp.com/usuarios/cadastro', usuario);
+    return this.http.post<Usuario>('https://sinergia.onrender.com/usuarios/cadastro', usuario);
   }
 
   getByIdUser(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`https://sinergiasocial.herokuapp.com/usuarios/${id}`, this.token)
+    return this.http.get<Usuario>(`https://sinergia.onrender.com/usuarios/${id}`, this.token)
   }
   atualizar(usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>('https://sinergiasocial.herokuapp.com/usuarios/atualizar', usuario);
+    return this.http.put<Usuario>('https://sinergia.onrender.com/usuarios/atualizar', usuario);
   }
 
   logado(){
